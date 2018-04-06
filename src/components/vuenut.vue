@@ -86,7 +86,7 @@
 
 <script>
 var hljs = require('highlight.js');
-import '../css/iconfont/material-icons.css'
+
 import circleButtom from './circleButtom.vue'
 import menuCircles from './menuCircles.vue'
 import jsonview from './jsonview.vue'

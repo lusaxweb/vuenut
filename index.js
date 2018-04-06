@@ -1,6 +1,6 @@
 import componentvuenut from './src/components/vuenut.vue'
 // import ''
-require("./src/css/iconfont/material-icons.css");
+// require("./src/css/iconfont/material-icons.css");
 const Vuenut = {
   install(Vue, options) {
     Vue.component(componentvuenut.name,componentvuenut)

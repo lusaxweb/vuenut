@@ -90,6 +90,8 @@ import circleButtom from './circleButtom.vue'
 import menuCircles from './menuCircles.vue'
 import jsonview from './jsonview.vue'
 import locked from './locked.vue'
+
+import '../css/iconfont/material-icons.css'
 export default {
   name:'vuenut',
   props:{

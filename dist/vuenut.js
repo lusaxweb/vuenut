@@ -6944,6 +6944,10 @@ var locked_Component = locked_normalizeComponent(
 
 /* harmony default export */ var src_components_locked = (locked_Component.exports);
 
+// EXTERNAL MODULE: ./src/css/iconfont/material-icons.css
+var material_icons = __webpack_require__("4uvn");
+var material_icons_default = /*#__PURE__*/__webpack_require__.n(material_icons);
+
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/components/vuenut.vue
 
 //
@@ -7034,6 +7038,8 @@ var locked_Component = locked_normalizeComponent(
 //
 
 var hljs = __webpack_require__("V8mf");
+
+
 
 
 
@@ -7237,7 +7243,7 @@ var hljs = __webpack_require__("V8mf");
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-56143ee2","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/vuenut.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4f64b89a","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/vuenut.vue
 var vuenut_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"contiene-vuenut",class:{
     'resizex':_vm.resize,
     'unseen':_vm.unseen
@@ -7249,7 +7255,7 @@ var vuenut_esExports = { render: vuenut_render, staticRenderFns: vuenut_staticRe
 /* harmony default export */ var components_vuenut = (vuenut_esExports);
 // CONCATENATED MODULE: ./src/components/vuenut.vue
 function vuenut_injectStyle (ssrContext) {
-  __webpack_require__("emLr")
+  __webpack_require__("fWLg")
 }
 var vuenut_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -7279,7 +7285,7 @@ var vuenut_Component = vuenut_normalizeComponent(
 // CONCATENATED MODULE: ./index.js
 
 // import ''
-__webpack_require__("4uvn");
+// require("./src/css/iconfont/material-icons.css");
 const Vuenut = {
   install(Vue, options) {
     Vue.component(src_components_vuenut.name,src_components_vuenut)
@@ -14053,13 +14059,6 @@ module.exports = function(hljs) {
 
 /***/ }),
 
-/***/ "emLr":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "esjm":
 /***/ (function(module, exports) {
 
@@ -14345,6 +14344,13 @@ module.exports = function (hljs) {
     ]
   };
 };
+
+/***/ }),
+
+/***/ "fWLg":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

@@ -5078,7 +5078,7 @@ module.exports = function(hljs) {
 /***/ "Fcum":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/vuenut06.png";
+module.exports = __webpack_require__.p + "dist/img/vuenut06.png";
 
 /***/ }),
 
@@ -15889,7 +15889,7 @@ module.exports = function(hljs) {
 /***/ "kLoJ":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/vuenut-favicon-32x32.png";
+module.exports = __webpack_require__.p + "dist/img/vuenut-favicon-32x32.png";
 
 /***/ }),
 

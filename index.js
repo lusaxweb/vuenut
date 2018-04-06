@@ -1,5 +1,5 @@
 import componentvuenut from './src/components/vuenut.vue'
-import './src/css/iconfont/material-icons.css'
+// import './src/css/iconfont/material-icons.css'
 
 const Vuenut = {
   install(Vue, options) {

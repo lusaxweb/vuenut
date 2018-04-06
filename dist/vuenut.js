@@ -1776,13 +1776,6 @@ module.exports = function(hljs) {
 
 /***/ }),
 
-/***/ "4uvn":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "5DVZ":
 /***/ (function(module, exports) {
 
@@ -2403,6 +2396,13 @@ module.exports = function(hljs) {
     ]
   };
 };
+
+/***/ }),
+
+/***/ "6k7z":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -7237,7 +7237,7 @@ var hljs = __webpack_require__("V8mf");
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-56143ee2","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/vuenut.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-62bf8840","hasScoped":false,"transformToRequire":{"video":["src","poster"],"source":"src","img":"src","image":"xlink:href"},"buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/components/vuenut.vue
 var vuenut_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"contiene-vuenut",class:{
     'resizex':_vm.resize,
     'unseen':_vm.unseen
@@ -7249,7 +7249,7 @@ var vuenut_esExports = { render: vuenut_render, staticRenderFns: vuenut_staticRe
 /* harmony default export */ var components_vuenut = (vuenut_esExports);
 // CONCATENATED MODULE: ./src/components/vuenut.vue
 function vuenut_injectStyle (ssrContext) {
-  __webpack_require__("emLr")
+  __webpack_require__("6k7z")
 }
 var vuenut_normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -7276,13 +7276,9 @@ var vuenut_Component = vuenut_normalizeComponent(
 
 /* harmony default export */ var src_components_vuenut = (vuenut_Component.exports);
 
-// EXTERNAL MODULE: ./src/css/iconfont/material-icons.css
-var material_icons = __webpack_require__("4uvn");
-var material_icons_default = /*#__PURE__*/__webpack_require__.n(material_icons);
-
 // CONCATENATED MODULE: ./index.js
 
-
+// import './src/css/iconfont/material-icons.css'
 
 const Vuenut = {
   install(Vue, options) {
@@ -14054,13 +14050,6 @@ module.exports = function(hljs) {
     ]
   };
 };
-
-/***/ }),
-
-/***/ "emLr":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 

@@ -6,7 +6,7 @@
     'resizex':resize,
     'unseen':unseen
     }">
-
+    13
     <circle-buttom
      :sticky="sticky"
      :unseen="unseen"
@@ -91,7 +91,8 @@ import menuCircles from './menuCircles.vue'
 import jsonview from './jsonview.vue'
 import locked from './locked.vue'
 
-import '../css/iconfont/material-icons.css'
+require('../css/iconfont/material-icons.css');
+
 export default {
   name:'vuenut',
   props:{

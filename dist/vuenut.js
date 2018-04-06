@@ -7287,20 +7287,11 @@ var material_icons_default = /*#__PURE__*/__webpack_require__.n(material_icons);
 const Vuenut = {
   install(Vue, options) {
     Vue.component(src_components_vuenut.name,src_components_vuenut)
-
-    Vue.prototype.$vn = {}
-
   }
-
-
 }
-
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(Vuenut)
-
 }
-// Vuesax.version = '__VERSION__'
-
 /* harmony default export */ var index_0 = __webpack_exports__["default"] = (Vuenut);
 
 

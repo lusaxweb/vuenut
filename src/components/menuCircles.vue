@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="con-ul-circles">
     <div class="con-logo">
-      <img src="./assets/vuenut06.png" alt="vuenut">
+      <img src="assets/vuenut06.png" alt="vuenut">
     </div>
     <div :class="{'ul-flex':resize,'activo-alguno':storesActivos||formato=='json'||resize||config}" class="con-ul">
 
@@ -249,10 +249,13 @@ export default {
     },
     obtenerColor(){
       let storageColor = localStorage.getItem("vuenutColor");
-      color.setCssVariable('--primary',storageColor)
-      let storageColorSplit = storageColor.split(',')
-      console.log(storageColorSplit);
-      this.colorTotal = color.rgbToHex(Number(storageColorSplit[0]),Number(storageColorSplit[1]),Number(storageColorSplit[2]))
+      if(storageColor){
+        color.setCssVariable('--primary',storageColor)
+        let storageColorSplit = storageColor.split(',')
+        console.log(storageColorSplit);
+        this.colorTotal = color.rgbToHex(Number(storageColorSplit[0]),Number(storageColorSplit[1]),Number(storageColorSplit[2]))
+
+      }
       // this.colorTotal = color.rgbToHex(0, 51, 255)
     },
     changeColor(colorx){

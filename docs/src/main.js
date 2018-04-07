@@ -14,7 +14,7 @@ import {store} from './store.js'
 // import Vuenut from '../../index.js'
 import Vuenut from '../../dist/vuenut.js'
 console.log(Vuenut);
-import '../../dist/vuenut.css'
+// import '../../dist/vuenut.css'
 Vue.use(Vuenut);
 // console.log(Vuesax);
 // Vue.use(InstantSearch);

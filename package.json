@@ -18,8 +18,8 @@
     "javascript",
     "css"
   ],
-  "main": "dist/vuenut.min.js",
-  "unpkg": "dist/vuenut.min.js",
+  "main": "dist/vuenut.js",
+  "unpkg": "dist/vuenut.js",
   "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config docs/build/webpack.dev.conf.js",

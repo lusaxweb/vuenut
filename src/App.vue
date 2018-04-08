@@ -7,7 +7,7 @@
     'unseen':unseen
     }">
     <img src="./assets/logo.png">
-    <img src="./assets/vuenut.png">
+    <img :src="imgx">
     <circle-buttom
      :sticky="sticky"
      :unseen="unseen"
@@ -119,6 +119,7 @@ export default {
   },
   data(){
     return {
+      imgx:require('./assets/vuenut.png'),
       storeVuenut:this.store,
       fontSize:16,
       jsonSpace:2,

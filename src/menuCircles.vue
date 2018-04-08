@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="con-ul-circles">
     <div class="con-logo">
-      <img src="./assets/vuenut06.png" alt="vuenut">
+      <img src="./assets/vuenut.png" alt="vuenut">
     </div>
     <div :class="{'ul-flex':resize,'activo-alguno':storesActivos||formato=='json'||resize||config}" class="con-ul">
 

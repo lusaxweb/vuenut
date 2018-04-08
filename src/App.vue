@@ -6,6 +6,8 @@
     'resizex':resize,
     'unseen':unseen
     }">
+    <img src="./assets/logo.png">
+    <img src="./assets/vuenut.png">
     <circle-buttom
      :sticky="sticky"
      :unseen="unseen"
@@ -85,10 +87,10 @@
 
 <script>
 var hljs = require('highlight.js');
-import circleButtom from './components/circleButtom.vue'
-import menuCircles from './components/menuCircles.vue'
-import jsonview from './components/jsonview.vue'
-import locked from './components/locked.vue'
+import circleButtom from './circleButtom.vue'
+import menuCircles from './menuCircles.vue'
+import jsonview from './jsonview.vue'
+import locked from './locked.vue'
 
 require('./assets/iconfont/material-icons.css');
 

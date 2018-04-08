@@ -7,7 +7,7 @@
     'unseen':unseen
     }">
     <img src="./assets/logo.png">
-    <img :src="imgx">
+    <img :src="require(`@/assets/vuenut.png`)">
     <circle-buttom
      :sticky="sticky"
      :unseen="unseen"

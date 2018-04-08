@@ -19,8 +19,6 @@
     "javascript",
     "css"
   ],
-  "main": "dist/vuenut.umd.js",
-  "unpkg": "dist/vuenut.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

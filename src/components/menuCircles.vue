@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="con-ul-circles">
     <div class="con-logo">
-      <img src="assets/vuenut06.png" alt="vuenut">
+      <img src="../assets/vuenut06.png" alt="vuenut">
     </div>
     <div :class="{'ul-flex':resize,'activo-alguno':storesActivos||formato=='json'||resize||config}" class="con-ul">
 
@@ -54,7 +54,7 @@
       </li>
       <li class="con-img" >
         <a target="_blank" href="https://github.com/lusaxweb/vuenut">
-          <img src="./assets/vuenut-favicon-32x32.png" alt="">
+          <img src="../assets/vuenut-favicon-32x32.png" alt="">
         </a>
       </li>
     </ul>
@@ -373,7 +373,6 @@ this.$emit('click-copiar','Store guardado',false)
 </script>
 
 <style lang="css" scoped>
-
 .con-btns-restaurar {
   transition: all .3s ease;
   opacity: 0;
@@ -488,10 +487,10 @@ this.$emit('click-copiar','Store guardado',false)
 }
 .con-config a {
   transition: all .3s ease;
-    color: rgba(var(--secondary),.7);
+  color: rgba(var(--secondary),.7);
 }
 .con-config a:hover {
-    color: rgb(var(--primary));
+  color: rgb(var(--primary));
 }
 .con-config ul li {
   width: 100%;
@@ -599,7 +598,7 @@ this.$emit('click-copiar','Store guardado',false)
   color: rgb(var(--fondo));
 }
 .eliminarUno:hover{
-    background: rgb(var(--danger)) !important;
+  background: rgb(var(--danger)) !important;
 }
 .importx input{
   position: absolute;
@@ -694,55 +693,55 @@ this.$emit('click-copiar','Store guardado',false)
   opacity: 0;
   transform: translate(100%);
 }
-  .menu-circles {
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.050);
-    white-space: nowrap;
-    overflow: auto;
-    overflow-y: hidden;
-    padding-left: 10px;
-    padding-right: 10px;
-    z-index: 100;
-    /* padding: 8px; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-  }
-  .menu-circles li{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgb(var(--gris));
-    color: rgba(var(--secondary));
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    /* float: left; */
-    transition: all .3s ease;
-    overflow: hidden;
-  }
-  .menu-circles li:not(.nombre-activo):hover {
-    background: rgb(var(--primary));
-    color: rgb(var(--fondo));
-  }
-  .menu-circles li i {
-    font-size: 20px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.menu-circles {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.050);
+  white-space: nowrap;
+  overflow: auto;
+  overflow-y: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 100;
+  /* padding: 8px; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.menu-circles li{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(var(--gris));
+  color: rgba(var(--secondary));
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  /* float: left; */
+  transition: all .3s ease;
+  overflow: hidden;
+}
+.menu-circles li:not(.nombre-activo):hover {
+  background: rgb(var(--primary));
+  color: rgb(var(--fondo));
+}
+.menu-circles li i {
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .ul-flex ul{
   display: flex;
   align-items: center;
@@ -751,68 +750,69 @@ this.$emit('click-copiar','Store guardado',false)
 .ul-flex .btn2,.ul-flex .btn1 {
   display: none;
 }
-  .nombrex {
-    width: 0px;
-    overflow: hidden;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    height: 100%;
-  }
+.nombrex {
+  width: 0px;
+  overflow: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  height: 100%;
+}
 
-  .nombrex input {
-    padding: 7px;
-    width: calc(100% - 80px);
-    border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.0);
-    padding-left: 15px;
-    color: rgb(var(--secondary));
-    background: rgb(var(--gris))
-  }
-  .nombrex button {
-    border: 0px solid rgba(0, 0, 0, 0.0);
-    width: 29px;
-    color: rgb(var(--fondo));
-    height: 29px;
-    background: rgb(var(--primary));
-    cursor: pointer;
-    border-radius: 50%;
-    margin-left: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-  }
-  .nombrex button:disabled {
-    opacity: .4;
-  }
-  .nombrex .cancelar{
-    background: rgb(var(--fondo));
-    color: rgb(var(--danger))
-  }
-  .nombrex .guardar{
-    /* border-radius: 0px 15px 15px 0px; */
-  }
-  .nombrex button i {
-    font-size: 16px;
-  }
-  .nombre-activo{
-    width: 250px !important;
-    border-radius: 20px !important;
-  }
-  .nombre-activo>i {
-    display: none !important;
-    opacity: 0;
-  }
-  .nombre-activo .nombrex {
-    opacity: 1;
-    width: 100%;
-    visibility: visible;
-  }
-  .no-sticky {
-    color: rgb(var(--secondary),.4) !important;
-  }
+.nombrex input {
+  padding: 7px;
+  width: calc(100% - 80px);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.0);
+  padding-left: 15px;
+  color: rgb(var(--secondary));
+  background: rgb(var(--gris))
+}
+.nombrex button {
+  border: 0px solid rgba(0, 0, 0, 0.0);
+  width: 29px;
+  color: rgb(var(--fondo));
+  height: 29px;
+  background: rgb(var(--primary));
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.nombrex button:disabled {
+  opacity: .4;
+}
+.nombrex .cancelar{
+  background: rgb(var(--fondo));
+  color: rgb(var(--danger))
+}
+.nombrex .guardar{
+  /* border-radius: 0px 15px 15px 0px; */
+}
+.nombrex button i {
+  font-size: 16px;
+}
+.nombre-activo{
+  width: 250px !important;
+  border-radius: 20px !important;
+}
+.nombre-activo>i {
+  display: none !important;
+  opacity: 0;
+}
+.nombre-activo .nombrex {
+  opacity: 1;
+  width: 100%;
+  visibility: visible;
+}
+.no-sticky {
+  color: rgb(var(--secondary),.4) !important;
+}
+
 </style>

@@ -269,16 +269,6 @@ mounted(){
 	width: 100%;
 	display: block;
 }
-/* .editando::after {
-	width: 100%;
-	position: absolute;
-	content: '';
-	left: 0px;
-	bottom: -2px;
-	background:  rgb(var(--gris));
-	height: 2px;
-	display: block;
-} */
 .editando input{
 	font-size: 16px;
 	color: rgb(var(--secondary));
@@ -316,174 +306,174 @@ mounted(){
 .activoEdit {
 	color: rgb(var(--primary));
 }
-  .con-hijos:hover .btn-copiar {
-	 opacity: 1;
-	 left: 5px;
-  }
-  .con-hijos:hover .btn-editar {
-	 opacity: 1;
-	 left: 27px;
-  }
-  .con-json a:hover .btn-copy {
-	 opacity: 1;
-	 left: 30px;
-  }
-  .con-json a:hover .btn-json {
-	 opacity: 1;
-	 left: 55px;
-  }
-  .con-json a:hover .btn-jsonstring {
-	 opacity: 1;
-	 left: 80px;
-  }
-	.con-hijos span {
-		transition: all .2s ease;
-		width: 100%;
-		display: block;
-	}
-	.con-hijos:hover span {
-		padding-left: 20px;
-	}
-	.btn-copiar {
-		position: absolute;
-		left: -22px;
-		cursor: pointer;
-		opacity: 0;
-		transition: all .2s ease;
-	}
-	.btn-editar {
-		position: absolute;
-		left: 22px;
-		cursor: pointer;
-		opacity: 0;
-		transition: all .2s ease;
-	}
-	.btn-json {
-		padding: 2px;
-		border-radius: 4px;
-		position: absolute;
-		left: -10px;
-		cursor: pointer;
-		opacity: 0;
-		transition: all .2s ease;
-	}
-	.btn-copy {
-		padding: 2px;
-		border-radius: 4px;
-		position: absolute;
-		left: -10px;
-		cursor: pointer;
-		opacity: 0;
-		transition: all .2s ease;
+.con-hijos:hover .btn-copiar {
+	opacity: 1;
+	left: 5px;
+}
+.con-hijos:hover .btn-editar {
+	opacity: 1;
+	left: 27px;
+}
+.con-json a:hover .btn-copy {
+	opacity: 1;
+	left: 30px;
+}
+.con-json a:hover .btn-json {
+	opacity: 1;
+	left: 55px;
+}
+.con-json a:hover .btn-jsonstring {
+	opacity: 1;
+	left: 80px;
+}
+.con-hijos span {
+	transition: all .2s ease;
+	width: 100%;
+	display: block;
+}
+.con-hijos:hover span {
+	padding-left: 20px;
+}
+.btn-copiar {
+	position: absolute;
+	left: -22px;
+	cursor: pointer;
+	opacity: 0;
+	transition: all .2s ease;
+}
+.btn-editar {
+	position: absolute;
+	left: 22px;
+	cursor: pointer;
+	opacity: 0;
+	transition: all .2s ease;
+}
+.btn-json {
+	padding: 2px;
+	border-radius: 4px;
+	position: absolute;
+	left: -10px;
+	cursor: pointer;
+	opacity: 0;
+	transition: all .2s ease;
+}
+.btn-copy {
+	padding: 2px;
+	border-radius: 4px;
+	position: absolute;
+	left: -10px;
+	cursor: pointer;
+	opacity: 0;
+	transition: all .2s ease;
 
-	}
-	.btn-jsonstring {
-		padding: 2px;
-		border-radius: 4px;
-		position: absolute;
-		left: -10px;
-		cursor: pointer;
-		opacity: 0;
-		transition: all .2s ease;
+}
+.btn-jsonstring {
+	padding: 2px;
+	border-radius: 4px;
+	position: absolute;
+	left: -10px;
+	cursor: pointer;
+	opacity: 0;
+	transition: all .2s ease;
 
-	}
+}
 .btn-json:hover,.btn-jsonstring:hover,.btn-copy:hover {
 	color: rgb(var(--primary))
 }
-	.btn-copiar:hover {
-		color: rgb(var(--primary));
-	}
-	.con-json {
-		height: 100%;
-		margin-left: 10px;
-		padding: 5px;
-		color: rgb(var(--secondary));
-	}
-	.con-json a {
-		cursor: pointer;
-		position: relative;
-		display: block;
-		/* background: rgb(24, 97, 89); */
-		display: flex;
-		align-items: center;
-		transition: all .2s ease;
-		/* justify-content: center; */
-	}
-	.con-json a .spanName {
-		transition: all .2s ease;
-	}
-	.con-json a:hover .spanName {
-		margin-left: 75px;
-	}
-	.con-json a:hover .spanx:not(.activox) {
-		border: 1px solid rgb(var(--primary));
-		color: rgb(var(--primary));
-	}
-	.jsonx {
-		padding: 5px;
-	}
-	.spanx {
-		width: 24px;
-		height: 24px;
-		display: block;
-		background: rgb(var(--gris));
-		border-radius: 50%;
-		float: left;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		font-size: 14px;
-		margin-right: 8px;
-		transition: all .2s ease;
-	}
-	.spanx::before {
-		transition: all .2s ease;
-	}
-	.activox {
-		background: rgb(var(--primary));
-		color: rgb(var(--fondo));
-	}
-	.activoxtext {
-		font-weight: bold;
-	}
-	.con-hijos {
-		border-left: 2px solid rgb(240, 240, 240);
-		padding: 5px;
-		padding-left: 10px;
-		position: relative;
-		cursor: default;
-		display: flex;
-		align-items: center;
-	}
-	.check {
-	 background: rgb(var(--color-success));
-	 color: rgb(var(--fondo)) !important;
-	 font-size: 12px;
-	 padding: 3px;
-	}
-	 {
+.btn-copiar:hover {
+	color: rgb(var(--primary));
+}
+.con-json {
+	height: 100%;
+	margin-left: 10px;
+	padding: 5px;
+	color: rgb(var(--secondary));
+}
+.con-json a {
+	cursor: pointer;
+	position: relative;
+	display: block;
+	/* background: rgb(24, 97, 89); */
+	display: flex;
+	align-items: center;
+	transition: all .2s ease;
+	/* justify-content: center; */
+}
+.con-json a .spanName {
+	transition: all .2s ease;
+}
+.con-json a:hover .spanName {
+	margin-left: 75px;
+}
+.con-json a:hover .spanx:not(.activox) {
+	border: 1px solid rgb(var(--primary));
+	color: rgb(var(--primary));
+}
+.jsonx {
+	padding: 5px;
+}
+.spanx {
+	width: 24px;
+	height: 24px;
+	display: block;
+	background: rgb(var(--gris));
+	border-radius: 50%;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	font-size: 14px;
+	margin-right: 8px;
+	transition: all .2s ease;
+}
+.spanx::before {
+	transition: all .2s ease;
+}
+.activox {
+	background: rgb(var(--primary));
+	color: rgb(var(--fondo));
+}
+.activoxtext {
+	font-weight: bold;
+}
+.con-hijos {
+	border-left: 2px solid rgb(240, 240, 240);
+	padding: 5px;
+	padding-left: 10px;
+	position: relative;
+	cursor: default;
+	display: flex;
+	align-items: center;
+}
+.check {
+	background: rgb(var(--color-success));
+	color: rgb(var(--fondo)) !important;
+	font-size: 12px;
+	padding: 3px;
+}
+{
 
-	}
-	.jsonstring .btn-copy {
-	 opacity: 1;
-	 left: 30px;
-  }
-  .jsonstring .btn-json {
-	 opacity: 1;
-	 left: 55px;
-  }
-  .jsonstring .btn-jsonstring {
-	 opacity: 1;
-	 left: 80px;
-  }
-	.jsonstring .spanName {
-		margin-left: 75px;
-	}
-	.jsonstring .btn-jsonstring {
-		background: rgb(var(--primary));
-		color: rgb(var(--fondo));
-		padding: 2px;
-		border-radius: 4px;
-	}
+}
+.jsonstring .btn-copy {
+	opacity: 1;
+	left: 30px;
+}
+.jsonstring .btn-json {
+	opacity: 1;
+	left: 55px;
+}
+.jsonstring .btn-jsonstring {
+	opacity: 1;
+	left: 80px;
+}
+.jsonstring .spanName {
+	margin-left: 75px;
+}
+.jsonstring .btn-jsonstring {
+	background: rgb(var(--primary));
+	color: rgb(var(--fondo));
+	padding: 2px;
+	border-radius: 4px;
+}
 </style>

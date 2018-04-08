@@ -34,16 +34,16 @@ export default {
   opacity: 0;
   transform: translate(-100%);
 }
-  .con-lok {
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgb(var(--fondo));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-  }
+.con-lok {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(var(--fondo));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
 </style>

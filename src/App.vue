@@ -85,10 +85,10 @@
 
 <script>
 var hljs = require('highlight.js');
-import circleButtom from './circleButtom.vue'
-import menuCircles from './menuCircles.vue'
-import jsonview from './jsonview.vue'
-import locked from './locked.vue'
+import circleButtom from './components/circleButtom.vue'
+import menuCircles from './components/menuCircles.vue'
+import jsonview from './components/jsonview.vue'
+import locked from './components/locked.vue'
 
 require('./assets/iconfont/material-icons.css');
 
@@ -282,7 +282,12 @@ export default {
 </script>
 
 <style lang="css">
-
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: arial;
+  box-sizing: border-box;
+}
 .con-prejson {
   padding: 10px;
 }
@@ -445,8 +450,6 @@ export default {
   position: fixed;
   z-index: 200000;
   display: block;
-  left: 0px;
-  top: 0px;
 }
 .con-funcionalidad {
   display: flex;

@@ -1,12 +1,14 @@
 {
   "name": "vuenut",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "private": false,
   "description": "dev tools for Vue js",
   "license": "MIT",
   "author": "ldrovira <luisdanielrovira8@gmail.com>",
   "homepage": "https://lusaxweb.github.io/vuenut/",
   "repository": "lusaxweb/vuenut",
+  "main": "dist/vuenut.umd.js",
+  "unpkg": "dist/vuenut.umd.js",
   "bugs": {
     "url": "https://github.com/lusaxweb/vuenut/issues"
   },

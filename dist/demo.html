@@ -4,13 +4,14 @@
 <link rel="stylesheet" href="./vuenut.css">
 
 <div id="app">
-  <demo></demo>
+  <vuenut></vuenut>
 </div>
 
 <script>
+Vue.use(vuenut)
 new Vue({
-  components: {
-    demo: vuenut
-  }
+  // components: {
+  //   vuenut: vuenut
+  // }
 }).$mount('#app')
 </script>

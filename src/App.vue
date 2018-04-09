@@ -6,10 +6,12 @@
     'resizex':resize,
     'unseen':unseen
     }">
-    <img src="./assets/logo.png">
+    <img src="assets/img/logo.png">
     <!-- <img :src="getImgUrl"> -->
-    <img :src="imgx">
-    <img src="/static/vuenut.png">
+    <!-- <img :src="imgx"> -->
+    <!-- <img src="static/vuenut.png"> -->
+    <img src="./assets/img/vuenut.png">
+    <!-- <img src="~assets/vuenut.png"> -->
     <circle-buttom
      :sticky="sticky"
      :unseen="unseen"
@@ -94,8 +96,8 @@ import menuCircles from './menuCircles.vue'
 import jsonview from './jsonview.vue'
 import locked from './locked.vue'
 
-require('./assets/iconfont/material-icons.css');
-import Image from './assets/vuenut.png'
+// require('assets/iconfont/material-icons.css');
+// import Image from 'assets/vuenut.png'
 
 export default {
   name:'vuenut',
@@ -122,7 +124,7 @@ export default {
   },
   data(){
     return {
-      imgx:Image,
+      // imgx:Image,
       storeVuenut:this.store,
       fontSize:16,
       jsonSpace:2,
@@ -179,11 +181,6 @@ export default {
     json: (value) => { return JSON.stringify(value, null, 2) }
   },
   methods:{
-    getImgUrl(pet) {
-  var images = require.context('./assets/', false, /\.png$/)
-  console.log(images("./vuenut.png"));
-  return images("./vuenut.png")
-},
     ofuscarx(){
       let textareax = this.$refs.textareax
       let valuex = JSON.stringify(JSON.parse(textareax.value),null,0)

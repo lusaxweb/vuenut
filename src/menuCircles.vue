@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="con-ul-circles">
     <div class="con-logo">
-      <img src="./assets/vuenut.png" alt="vuenut">
+      <img src="assets/vuenut.png" alt="vuenut">
     </div>
     <div :class="{'ul-flex':resize,'activo-alguno':storesActivos||formato=='json'||resize||config}" class="con-ul">
 
@@ -54,7 +54,7 @@
       </li>
       <li class="con-img" >
         <a target="_blank" href="https://github.com/lusaxweb/vuenut">
-          <img src="./assets/vuenut-favicon-32x32.png" alt="">
+          <img src="assets/vuenut-favicon-32x32.png" alt="">
         </a>
       </li>
     </ul>

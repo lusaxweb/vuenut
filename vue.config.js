@@ -1,7 +1,8 @@
+// config/index.js
 module.exports = {
-  // configureWebpack: {
-  //   output: {
-  //     path: __dirname + "/dist"
-  //   }
+  // ...
+  // build: {
+    // assetsPublicPath: '/',
+    // assetsSubDirectory: 'static'
   // }
-};
+}

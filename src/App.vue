@@ -284,7 +284,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -306,7 +306,7 @@ export default {
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
-* {
+.contiene-vuenut * {
   margin: 0px;
   padding: 0px;
   font-family: arial;

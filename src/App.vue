@@ -292,7 +292,7 @@ export default {
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: 'Material Icons' !important;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -311,7 +311,6 @@ export default {
   padding: 0px;
   font-family: arial;
   box-sizing: border-box;
-  color: rgba(var(--secondary));
 }
 .con-prejson {
   padding: 10px;
@@ -366,6 +365,7 @@ export default {
   resize: none;
   color: rgb(var(--secondary));
   background: rgb(var(--fondo));
+  outline: none;
 }
 .store-edit textarea::selection {
   color: rgb(var(--fondo));

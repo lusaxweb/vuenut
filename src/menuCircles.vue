@@ -98,7 +98,7 @@
         </li>
 
         <li>
-          font size
+          Font size
           <span class="btns-size">
             <button :disabled="fontSize<=12" @click="$emit('font-size-less')"  type="button" name="button"><i class="material-icons">remove</i></button>
             {{fontSize}}px
@@ -736,7 +736,7 @@ this.$emit('click-copiar','Store guardado',false)
   transition: all .3s ease;
   overflow: hidden;
 }
-.menu-circles li:not(.nombre-activo):hover {
+.menu-circles li:not(.nombre-activo):not(.con-img):hover {
   background: rgb(var(--primary)) !important;
   color: rgb(var(--fondo)) !important;
 }

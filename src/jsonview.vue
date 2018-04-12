@@ -59,7 +59,7 @@
 					</a>
 					<div v-else id="editando" class="editando eee">
 						<!--  -->
-						<input v-if="typeof json != 'boolean'" @blur="editandox=false" v-focus="editandox" :value="json" @input="inputx($event.target.value)" type="text">
+						<input @keypress.enter="editandox=false" v-if="typeof json != 'boolean'" @blur="editandox=false" v-focus="editandox" :value="json" @input="inputx($event.target.value)" type="text">
 						<!-- <input v-else type="checkbox" :value="json == true" @blur="editandox=false" v-focus="editandox" @change="inputx($event.target.checked,true)"> -->
 						<!-- <a v-else href="#">{{json}}</a> -->
 						<!--  -->

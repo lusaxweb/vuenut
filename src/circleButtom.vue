@@ -1,5 +1,6 @@
 <template lang="html">
   <div
+    ref="btn"
     :class="{
       'sticky-no':!sticky,
       'unseen':unseen,
@@ -49,6 +50,10 @@ export default {
     console.log("hola");
     window.addEventListener("mousemove",this.mousemovex)
   },
+  mounted(){
+    let btn = this.$refs.btn
+    document.body.insertBefore(btn, document.body.firstChild)
+  },
   methods:{
     mousemovex(event){
       let x = event.x
@@ -67,7 +72,7 @@ export default {
 <style lang="css" scoped>
 .con-circle-btn {
   position: fixed;
-  z-index: 10000;
+  z-index: 200001;
   background: rgb(var(--primary-vuenut));
   width: 55px;
   height: 55px;
@@ -86,9 +91,15 @@ export default {
 .con-circle-btn:not(.visiblexx):hover {
   margin-left: 8px;
 }
+.con-circle-btn i {
+  transition: all .2s ease;
+}
 .con-circle-btn.visiblexx:hover {
   color: rgb(var(--primary-vuenut)) !important;
-  padding-right: 15px;
+  /* padding-right: 15px; */
+}
+.con-circle-btn.visiblexx:hover i {
+  transform: translate(-10px);
 }
 .visiblexx {
   color: rgba(var(--secondary-vuenut));

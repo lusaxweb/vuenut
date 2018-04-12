@@ -4,7 +4,8 @@
   class="contiene-vuenut"
   :class="{
     'resizex':resize,
-    'unseen':unseen
+    'unseen':unseen,
+    'visiblex':visible
     }">
     <circle-buttom
      :sticky="sticky"
@@ -14,9 +15,6 @@
      @click="clickCircle"/>
 
   <div
-    :class="{
-    'visiblex':visible,
-    }"
     class="con-vuenut">
 
     <locked v-if="password!=passwordx" v-model="passwordx"/>
@@ -96,11 +94,11 @@ import locked from './locked.vue'
 export default {
   name:'vuenut',
   props:{
+
     unseen:{
       type:Boolean,
       default:false,
     },
-
     password:{
       type:[String,Boolean],
       default:false,
@@ -448,7 +446,7 @@ export default {
   width: 360px;
   background: rgb(var(--fondo-vuenut));
   height: 100vh;
-  transform: translate(-100%);
+
   transition: all .3s ease;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
   border-radius: 0px 10px 10px 0px;
@@ -477,6 +475,8 @@ export default {
   display: block;
   top: 0px;
   left: 0px;
+  transform: translate(-100%);
+  transition: all .3s ease;
 }
 .con-funcionalidad {
   display: flex;

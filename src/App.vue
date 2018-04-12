@@ -474,6 +474,8 @@ export default {
   position: fixed;
   z-index: 200000;
   display: block;
+  top: 0px;
+  left: 0px;
 }
 .con-funcionalidad {
   display: flex;

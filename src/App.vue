@@ -6,12 +6,9 @@
     'resizex':resize,
     'unseen':unseen
     }">
-    <img src="assets/img/logo.png">
-    <!-- <img :src="getImgUrl"> -->
-    <!-- <img :src="imgx"> -->
-    <!-- <img src="static/vuenut.png"> -->
+    <!-- <img src="assets/img/logo.png"> -->
     <img src="./assets/img/vuenut.png">
-    <!-- <img src="~assets/vuenut.png"> -->
+    <img src="/public/img/vuenut.png">
     <circle-buttom
      :sticky="sticky"
      :unseen="unseen"
@@ -125,6 +122,7 @@ export default {
   data(){
     return {
       // imgx:Image,
+      baseUrl: process.env.BASE_URL,
       storeVuenut:this.store,
       fontSize:16,
       jsonSpace:2,

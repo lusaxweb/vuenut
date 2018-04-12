@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="con-ul-circles">
     <div class="con-logo">
-      <img src="./assets/img/vuenut.png" alt="vuenut">
+      <img src="./assets/img/vuenut_opt.png" alt="">
     </div>
     <div :class="{'ul-flex':resize,'activo-alguno':storesActivos||formato=='json'||resize||config}" class="con-ul">
 
@@ -373,6 +373,12 @@ this.$emit('click-copiar','Store guardado',false)
 </script>
 
 <style lang="css" scoped>
+/* .src= */
+/* .logo-vuenut {
+  background-image: url("./assets/img/vuenut.png");
+  width: 100%;
+  height: 50px;
+} */
 .con-btns-restaurar {
   transition: all .3s ease;
   opacity: 0;

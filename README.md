@@ -7,6 +7,10 @@
 
 Vuenut is a development tool to make work with vuex much easier with features designed for a fast and fluid development.
 
+# demo
+
+[Codepen](https://codepen.io/lusaxweb/pen/dmLEKv)
+
 
 # Browser Support
 Recent versions of Firefox, Chrome, Edge, Opera and Safari. IE10+

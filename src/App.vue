@@ -284,7 +284,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -311,6 +311,7 @@ export default {
   padding: 0px;
   font-family: arial;
   box-sizing: border-box;
+  color: rgba(var(--secondary));
 }
 .con-prejson {
   padding: 10px;

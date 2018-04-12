@@ -429,6 +429,7 @@ this.$emit('click-copiar','Store guardado',false)
   margin-right: 5px;
   cursor: pointer;
   transition: all .3s ease;
+  padding: 0px;
 }
 .btns-size button:disabled {
   opacity: .5;

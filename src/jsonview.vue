@@ -13,15 +13,12 @@
 					}" title="Copiar Store" @click="toggleJson(json)" class=" btn-json">
 					<i class="material-icons">{{checkJ?'thumb_up':'content_copy'}}</i>
 				</div>
-				<div title="Cambiar Formato" @click="jsonstringx=!jsonstringx" :class="{'flaticon-chat':!jsonstringx,'flaticon-share':jsonstringx}"  class=" btn-jsonstring">
+				<div title="Cambiar Formato" @click="jsonstringx=!jsonstringx" class=" btn-jsonstring">
 					<i class="material-icons">flip</i>
 				</div>
 				<span @click="opened = !opened" class="spanx" :class="{'activox':opened}">
 					<i class="material-icons">{{opened?'remove':'navigate_next'}}</i>
 				</span><span @click="opened = !opened" :class="{'activoxtext':opened}" class="spanName" style="color: rgb(var(--primary))">{{ name }}</span>
-				<!-- <span>{{ Array.isArray( json ) ? 'array' : typeof( json ) }}</span> -->
-
-				<!-- <span>{{ Object.keys( json ).length + " items" }}</span> -->
 			</a>
 
 			<template v-if="opened">
@@ -378,10 +375,10 @@ mounted(){
 
 }
 .btn-json:hover,.btn-jsonstring:hover,.btn-copy:hover {
-	color: rgb(var(--primary))
+	color: rgb(var(--primary)) !important;
 }
 .btn-copiar:hover {
-	color: rgb(var(--primary));
+	color: rgb(var(--primary)) !important;
 }
 .con-json {
 	height: 100%;
@@ -406,8 +403,8 @@ mounted(){
 	margin-left: 75px;
 }
 .con-json a:hover .spanx:not(.activox) {
-	border: 1px solid rgb(var(--primary));
-	color: rgb(var(--primary));
+	border: 1px solid rgb(var(--primary)) !important;
+	color: rgb(var(--primary)) !important;
 }
 .jsonx {
 	padding: 5px;

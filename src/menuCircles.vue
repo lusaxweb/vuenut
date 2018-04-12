@@ -438,8 +438,8 @@ this.$emit('click-copiar','Store guardado',false)
   font-size: 16px;
 }
 .btns-size button:hover {
-  background: rgb(var(--primary));
-  color: rgb(var(--fondo))
+  background: rgb(var(--primary)) !important;
+  color: rgb(var(--fondo)) !important;
 }
 .con-logo {
   width: 100%;
@@ -496,7 +496,7 @@ this.$emit('click-copiar','Store guardado',false)
   color: rgba(var(--secondary),.7);
 }
 .con-config a:hover {
-  color: rgb(var(--primary));
+  color: rgb(var(--primary)) !important;
 }
 .con-config ul li {
   width: 100%;
@@ -512,8 +512,8 @@ this.$emit('click-copiar','Store guardado',false)
   overflow: hidden;
 }
 .con-config ul li:hover {
-  color: rgb(var(--primary));
-  background: linear-gradient(to right, rgb(var(--gris)) 0%, rgb(var(--fondo)) 100%);
+  color: rgb(var(--primary)) !important;
+  background: linear-gradient(to right, rgb(var(--gris)) 0%, rgb(var(--fondo)) 100%) !important;
 }
 .rojo:hover {
   color: rgb(var(--danger)) !important;
@@ -578,7 +578,7 @@ this.$emit('click-copiar','Store guardado',false)
   border-top: 0px
 }
 .con-stores ul li:hover {
-  background: linear-gradient(to right, rgb(var(--gris)) 0%, rgb(var(--fondo)) 100%);
+  background: linear-gradient(to right, rgb(var(--gris)) 0%, rgb(var(--fondo)) 100%) !important;
   /* color:rgb(var(--fondo)); */
 }
 .con-icons {
@@ -600,8 +600,8 @@ this.$emit('click-copiar','Store guardado',false)
   transition: all .3s ease;
 }
 .con-icons i:hover {
-  background: rgb(var(--primary));
-  color: rgb(var(--fondo));
+  background: rgb(var(--primary)) !important;
+  color: rgb(var(--fondo)) !important;
 }
 .eliminarUno:hover{
   background: rgb(var(--danger)) !important;
@@ -689,7 +689,7 @@ this.$emit('click-copiar','Store guardado',false)
   cursor: pointer;
 }
 .btn2:hover,.btn1:hover {
-  color: rgb(var(--primary));
+  color: rgb(var(--primary)) !important;
 }
 .no-va {
   opacity: 0;
@@ -736,8 +736,8 @@ this.$emit('click-copiar','Store guardado',false)
   overflow: hidden;
 }
 .menu-circles li:not(.nombre-activo):hover {
-  background: rgb(var(--primary));
-  color: rgb(var(--fondo));
+  background: rgb(var(--primary)) !important;
+  color: rgb(var(--fondo)) !important;
 }
 .menu-circles li i {
   font-size: 20px;

@@ -87,7 +87,7 @@ export default {
   margin-left: 8px;
 }
 .con-circle-btn.visiblexx:hover {
-  color: rgb(var(--primary));
+  color: rgb(var(--primary)) !important;
   padding-right: 15px;
 }
 .visiblexx {

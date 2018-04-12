@@ -6,9 +6,6 @@
     'resizex':resize,
     'unseen':unseen
     }">
-    <!-- <img src="assets/img/logo.png"> -->
-    <img src="./assets/img/vuenut.png">
-    <img src="/public/img/vuenut.png">
     <circle-buttom
      :sticky="sticky"
      :unseen="unseen"

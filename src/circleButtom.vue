@@ -68,7 +68,7 @@ export default {
 .con-circle-btn {
   position: fixed;
   z-index: 10000;
-  background: rgb(var(--primary));
+  background: rgb(var(--primary-vuenut));
   width: 55px;
   height: 55px;
   transform: translate(-50%,-50%);
@@ -81,18 +81,18 @@ export default {
   cursor: pointer;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
   /* color: rgba(0, 0, 0, 0.4); */
-  color: rgb(var(--fondo));
+  color: rgb(var(--fondo-vuenut));
 }
 .con-circle-btn:not(.visiblexx):hover {
   margin-left: 8px;
 }
 .con-circle-btn.visiblexx:hover {
-  color: rgb(var(--primary)) !important;
+  color: rgb(var(--primary-vuenut)) !important;
   padding-right: 15px;
 }
 .visiblexx {
-  color: rgba(var(--secondary));
-  background: rgb(var(--fondo));
+  color: rgba(var(--secondary-vuenut));
+  background: rgb(var(--fondo-vuenut));
   margin-left: 27px;
   border-radius: 0px 50% 50% 0px;
   box-shadow: 10px 0px 15px 0px rgba(0, 0, 0, 0.05);
@@ -101,8 +101,8 @@ export default {
   transform: translate(0) !important;
   left: 0px !important;
   top: 5px !important;
-  background: rgb(var(--primary));
-  color: rgb(var(--fondo));
+  background: rgb(var(--primary-vuenut));
+  color: rgb(var(--fondo-vuenut));
   margin-left: 0px;
 }
 .unseen:not(.visiblexx) {

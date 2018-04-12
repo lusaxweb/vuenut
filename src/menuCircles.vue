@@ -214,19 +214,19 @@ export default {
         // --danger: 255, 74, 74;
         // --fondo:255, 255, 255;
         // --gris:240, 240, 240;
-        color.setCssVariable('--fondo',`255, 255, 255`)
-        // color.setCssVariable('--primary',`0,198,158`)
-        color.setCssVariable('--secondary',`67, 84, 102`)
-        color.setCssVariable('--gris',`240, 240, 240`)
+        color.setCssVariable('--fondo-vuenut',`255, 255, 255`)
+        // color.setCssVariable('--primary-vuenut',`0,198,158`)
+        color.setCssVariable('--secondary-vuenut',`67, 84, 102`)
+        color.setCssVariable('--gris-vuenut',`240, 240, 240`)
         this.night = false
       } else {
         this.night = true
         console.log("click night");
   // rgb(31, 42, 55)
-        color.setCssVariable('--fondo',`21, 28, 37`);
-        // color.setCssVariable('--primary',`0,198,158`)
-        color.setCssVariable('--secondary',`220,220,220`)
-        color.setCssVariable('--gris',`31, 42, 55`)
+        color.setCssVariable('--fondo-vuenut',`21, 28, 37`);
+        // color.setCssVariable('--primary-vuenut',`0,198,158`)
+        color.setCssVariable('--secondary-vuenut',`220,220,220`)
+        color.setCssVariable('--gris-vuenut',`31, 42, 55`)
       }
 
     },
@@ -243,14 +243,14 @@ export default {
     },
     restoreColor(){
       localStorage.setItem("vuenutColor", `0,198,158`)
-      color.setCssVariable('--primary',`0,198,158`)
+      color.setCssVariable('--primary-vuenut',`0,198,158`)
       this.colorTotal = '#00c69e'
       console.log("paso");
     },
     obtenerColor(){
       let storageColor = localStorage.getItem("vuenutColor");
       if(storageColor){
-        color.setCssVariable('--primary',storageColor)
+        color.setCssVariable('--primary-vuenut',storageColor)
         let storageColorSplit = storageColor.split(',')
         console.log(storageColorSplit);
         this.colorTotal = color.rgbToHex(Number(storageColorSplit[0]),Number(storageColorSplit[1]),Number(storageColorSplit[2]))
@@ -260,7 +260,7 @@ export default {
     },
     changeColor(colorx){
       let colorxx = color.hexToRgb(colorx)
-      color.setCssVariable('--primary',`${colorxx.r},${colorxx.g},${colorxx.b}`)
+      color.setCssVariable('--primary-vuenut',`${colorxx.r},${colorxx.g},${colorxx.b}`)
       localStorage.setItem("vuenutColor", `${colorxx.r},${colorxx.g},${colorxx.b}`)
     },
     ponerStore(i){
@@ -398,17 +398,17 @@ this.$emit('click-copiar','Store guardado',false)
   font-size: 12px !important;
 }
 .aceptarR {
-  background: rgb(var(--danger));
+  background: rgb(var(--danger-vuenut));
   border: 0px;
-  color: rgb(var(--fondo));
+  color: rgb(var(--fondo-vuenut));
   border-radius: 12px;
   padding-left: 10px !important;
   padding-right: 10px !important;
 }
 .cancelarR {
-  background: rgb(var(--gris));
+  background: rgb(var(--gris-vuenut));
   border: 0px;
-  color: rgb(var(--secondary));
+  color: rgb(var(--secondary-vuenut));
   border-radius: 12px;
   padding-left: 10px !important;
   padding-right: 10px !important;
@@ -423,8 +423,8 @@ this.$emit('click-copiar','Store guardado',false)
   height: 27px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255,.0);
-  background: rgb(var(--gris));
-  color: rgb(var(--secondary));
+  background: rgb(var(--gris-vuenut));
+  color: rgb(var(--secondary-vuenut));
   margin-left: 5px;
   margin-right: 5px;
   cursor: pointer;
@@ -439,8 +439,8 @@ this.$emit('click-copiar','Store guardado',false)
   font-size: 16px;
 }
 .btns-size button:hover {
-  background: rgb(var(--primary)) !important;
-  color: rgb(var(--fondo)) !important;
+  background: rgb(var(--primary-vuenut)) !important;
+  color: rgb(var(--fondo-vuenut)) !important;
 }
 .con-logo {
   width: 100%;
@@ -464,11 +464,11 @@ this.$emit('click-copiar','Store guardado',false)
   transition: all .3s ease;
 }
 .con-img:hover {
-  background: rgba(var(--gris)) !important;
+  background: rgba(var(--gris-vuenut)) !important;
 }
 .con-img:hover img {
   filter: saturate(100%);
-  background: rgb(var(--gris)) !important;
+  background: rgb(var(--gris-vuenut)) !important;
 }
 .con-img a {
   width: 100%;
@@ -494,16 +494,16 @@ this.$emit('click-copiar','Store guardado',false)
 }
 .con-config a {
   transition: all .3s ease;
-  color: rgba(var(--secondary),.7);
+  color: rgba(var(--secondary-vuenut),.7);
 }
 .con-config a:hover {
-  color: rgb(var(--primary)) !important;
+  color: rgb(var(--primary-vuenut)) !important;
 }
 .con-config ul li {
   width: 100%;
   padding: 10px;
-  background: linear-gradient(to right, rgb(var(--gris)) 0%, rgb(var(--fondo)) 100%);
-  color: rgba(var(--secondary),.7);
+  background: linear-gradient(to right, rgb(var(--gris-vuenut)) 0%, rgb(var(--fondo-vuenut)) 100%);
+  color: rgba(var(--secondary-vuenut),.7);
   font-weight: bold;
   cursor: pointer;
   transition: all .3s ease;
@@ -513,14 +513,14 @@ this.$emit('click-copiar','Store guardado',false)
   overflow: hidden;
 }
 .con-config ul li:hover {
-  color: rgb(var(--primary)) !important;
-  background: linear-gradient(to right, rgb(var(--gris)) 0%, rgb(var(--fondo)) 100%) !important;
+  color: rgb(var(--primary-vuenut)) !important;
+  background: linear-gradient(to right, rgb(var(--gris-vuenut)) 0%, rgb(var(--fondo-vuenut)) 100%) !important;
 }
 .rojo:hover {
-  color: rgb(var(--danger)) !important;
+  color: rgb(var(--danger-vuenut)) !important;
 }
 .color {
-  color: rgb(var(--primary)) !important;
+  color: rgb(var(--primary-vuenut)) !important;
 
 }
 .color span {
@@ -533,7 +533,7 @@ this.$emit('click-copiar','Store guardado',false)
 }
 .color input {
   border: 0px;
-  background: rgb(var(--primary));
+  background: rgb(var(--primary-vuenut));
   position: absolute;
   width: 100%;
   height: 100%;
@@ -563,13 +563,13 @@ this.$emit('click-copiar','Store guardado',false)
   padding-left: 15px;
   padding-right: 15px;
   /* background: rgb(250, 250, 250); */
-  background: linear-gradient(to right, rgb(var(--gris)) 0%, rgb(var(--fondo)) 100%);
+  background: linear-gradient(to right, rgb(var(--gris-vuenut)) 0%, rgb(var(--fondo-vuenut)) 100%);
   cursor: pointer;
   border-top: 1px solid rgba(0, 0, 0, 0.050);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(var(--secondary));
+  color: rgb(var(--secondary-vuenut));
   transition: all .2s ease;
   text-transform: capitalize;
   font-weight: bold;
@@ -579,18 +579,18 @@ this.$emit('click-copiar','Store guardado',false)
   border-top: 0px
 }
 .con-stores ul li:hover {
-  background: linear-gradient(to right, rgb(var(--gris)) 0%, rgb(var(--fondo)) 100%) !important;
-  /* color:rgb(var(--fondo)); */
+  background: linear-gradient(to right, rgb(var(--gris-vuenut)) 0%, rgb(var(--fondo-vuenut)) 100%) !important;
+  /* color:rgb(var(--fondo-vuenut)); */
 }
 .con-icons {
-  /* color: rgb(var(--secondary)) */
+  /* color: rgb(var(--secondary-vuenut)) */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .con-icons i {
   border-radius: 50%;
-  background: rgba(var(--gris));
+  background: rgba(var(--gris-vuenut));
   width: 35px;
   height: 35px;
   display: flex;
@@ -601,11 +601,11 @@ this.$emit('click-copiar','Store guardado',false)
   transition: all .3s ease;
 }
 .con-icons i:hover {
-  background: rgb(var(--primary)) !important;
-  color: rgb(var(--fondo)) !important;
+  background: rgb(var(--primary-vuenut)) !important;
+  color: rgb(var(--fondo-vuenut)) !important;
 }
 .eliminarUno:hover{
-  background: rgb(var(--danger)) !important;
+  background: rgb(var(--danger-vuenut)) !important;
 }
 .importx input{
   position: absolute;
@@ -621,8 +621,8 @@ this.$emit('click-copiar','Store guardado',false)
   transform: rotate(360deg);
 }
 .activo-menu {
-  background: rgb(var(--primary)) !important;
-  color: rgb(var(--fondo)) !important;
+  background: rgb(var(--primary-vuenut)) !important;
+  color: rgb(var(--fondo-vuenut)) !important;
   border-radius: 50% 50% 0px 0px !important;
   transform: translate(0,10px);
   /* height: 60px !important; */
@@ -651,7 +651,7 @@ this.$emit('click-copiar','Store guardado',false)
   z-index: 3000;
   left: 50%;
   transform: translate(-50%);
-  background: rgb(var(--primary));
+  background: rgb(var(--primary-vuenut));
   transition: all .3s ease;
 }
 .activo-alguno::after {
@@ -664,9 +664,9 @@ this.$emit('click-copiar','Store guardado',false)
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(var(--fondo));
-  color: rgba(var(--secondary),.6);
-  border-right: 1px solid rgba(var(--gris));
+  background: rgb(var(--fondo-vuenut));
+  color: rgba(var(--secondary-vuenut),.6);
+  border-right: 1px solid rgba(var(--gris-vuenut));
   z-index: 2000;
   height: 100%;
   top: 0px;
@@ -681,16 +681,16 @@ this.$emit('click-copiar','Store guardado',false)
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(var(--fondo));
-  color: rgba(var(--secondary),.6);
-  border-left: 1px solid rgba(var(--gris));
+  background: rgb(var(--fondo-vuenut));
+  color: rgba(var(--secondary-vuenut),.6);
+  border-left: 1px solid rgba(var(--gris-vuenut));
   z-index: 2000;
   height: 100%;
   transition: all .3s ease;
   cursor: pointer;
 }
 .btn2:hover,.btn1:hover {
-  color: rgb(var(--primary)) !important;
+  color: rgb(var(--primary-vuenut)) !important;
 }
 .no-va {
   opacity: 0;
@@ -722,8 +722,8 @@ this.$emit('click-copiar','Store guardado',false)
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgb(var(--gris));
-  color: rgba(var(--secondary));
+  background: rgb(var(--gris-vuenut));
+  color: rgba(var(--secondary-vuenut));
   display: inline-block;
   align-items: center;
   justify-content: center;
@@ -737,8 +737,8 @@ this.$emit('click-copiar','Store guardado',false)
   overflow: hidden;
 }
 .menu-circles li:not(.nombre-activo):not(.con-img):hover {
-  background: rgb(var(--primary)) !important;
-  color: rgb(var(--fondo)) !important;
+  background: rgb(var(--primary-vuenut)) !important;
+  color: rgb(var(--fondo-vuenut)) !important;
 }
 .menu-circles li i {
   font-size: 20px;
@@ -774,15 +774,15 @@ this.$emit('click-copiar','Store guardado',false)
   border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.0);
   padding-left: 15px;
-  color: rgb(var(--secondary));
-  background: rgb(var(--gris))
+  color: rgb(var(--secondary-vuenut));
+  background: rgb(var(--gris-vuenut))
 }
 .nombrex button {
   border: 0px solid rgba(0, 0, 0, 0.0);
   width: 29px;
-  color: rgb(var(--fondo));
+  color: rgb(var(--fondo-vuenut));
   height: 29px;
-  background: rgb(var(--primary));
+  background: rgb(var(--primary-vuenut));
   cursor: pointer;
   border-radius: 50%;
   margin-left: 4px;
@@ -796,8 +796,8 @@ this.$emit('click-copiar','Store guardado',false)
   opacity: .4;
 }
 .nombrex .cancelar{
-  background: rgb(var(--fondo));
-  color: rgb(var(--danger))
+  background: rgb(var(--fondo-vuenut));
+  color: rgb(var(--danger-vuenut))
 }
 .nombrex .guardar{
   /* border-radius: 0px 15px 15px 0px; */
@@ -819,7 +819,7 @@ this.$emit('click-copiar','Store guardado',false)
   visibility: visible;
 }
 .no-sticky {
-  color: rgb(var(--secondary),.4) !important;
+  color: rgb(var(--secondary-vuenut),.4) !important;
 }
 
 </style>

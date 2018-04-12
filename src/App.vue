@@ -324,7 +324,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: rgb(var(--primary));
+  background: rgb(var(--primary-vuenut));
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
@@ -334,7 +334,7 @@ export default {
   left: 15px;
 }
 .guardar-li {
-  background: rgb(var(--gris),.2);
+  background: rgb(var(--gris-vuenut),.2);
   margin-left: 10px;
 }
 .store-edit ul li {
@@ -343,13 +343,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(var(--fondo));
+  color: rgb(var(--fondo-vuenut));
   cursor: pointer;
   transition: all .3s ease;
   border-radius: 50%;
 }
 .store-edit ul li:hover {
-  background: rgb(var(--secondary),.2)
+  background: rgb(var(--secondary-vuenut),.2)
 }
 .store-edit ul li i {
   font-size: 20px;
@@ -363,21 +363,21 @@ export default {
   border: 0px;
   padding: 10px;
   resize: none;
-  color: rgb(var(--secondary));
-  background: rgb(var(--fondo));
+  color: rgb(var(--secondary-vuenut));
+  background: rgb(var(--fondo-vuenut));
   outline: none;
 }
 .store-edit textarea::selection {
-  color: rgb(var(--fondo));
-  background: rgb(var(--secondary));
+  color: rgb(var(--fondo-vuenut));
+  background: rgb(var(--secondary-vuenut));
 }
 
 :root {
-  --primary: 0, 198, 158;
-  --secondary: 67, 84, 102;
-  --danger: 255, 74, 74;
-  --fondo:255, 255, 255;
-  --gris:240, 240, 240;
+  --primary-vuenut: 0, 198, 158;
+  --secondary-vuenut: 67, 84, 102;
+  --danger-vuenut: 255, 74, 74;
+  --fondo-vuenut:255, 255, 255;
+  --gris-vuenut:240, 240, 240;
 }
 *::-webkit-scrollbar{
   width: 5px;
@@ -388,13 +388,13 @@ export default {
   border-radius: 5px;
 }
 .hljs-name {
-  color: rgba(var(--primary),1);
+  color: rgba(var(--primary-vuenut),1);
 }
 .hljs-string {
-  color: rgb(var(--secondary)) !important;
+  color: rgb(var(--secondary-vuenut)) !important;
 }
 .hljs-attr {
-  color:rgba(var(--primary),1);
+  color:rgba(var(--primary-vuenut),1);
 
 }
 .code {
@@ -402,7 +402,7 @@ export default {
   font-weight: normal;
 
   background: rgb(245, 245, 245);
-  color: rgb(var(--secondary));
+  color: rgb(var(--secondary-vuenut));
   overflow: auto;
   max-height:300px;
   height: auto;
@@ -424,8 +424,8 @@ export default {
 
 .noti {
   width: 100%;
-  background: rgb(var(--primary));
-  color: rgb(var(--fondo));
+  background: rgb(var(--primary-vuenut));
+  color: rgb(var(--fondo-vuenut));
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -439,14 +439,14 @@ export default {
   margin-right: 10px;
 }
 .n-eliminar {
-  background: rgb(var(--danger));
+  background: rgb(var(--danger-vuenut));
 }
 .con-vuenut {
   position: fixed;
   left: 0px;
   top: 0px;
   width: 360px;
-  background: rgb(var(--fondo));
+  background: rgb(var(--fondo-vuenut));
   height: 100vh;
   transform: translate(-100%);
   transition: all .3s ease;
@@ -461,7 +461,7 @@ export default {
 }
 .arbolJson {
   font-weight: bold;
-  color: rgb(var(--secondary));
+  color: rgb(var(--secondary-vuenut));
   overflow: auto;
   height: 100%;
 }

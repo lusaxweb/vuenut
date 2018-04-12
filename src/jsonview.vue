@@ -18,7 +18,7 @@
 				</div>
 				<span @click="opened = !opened" class="spanx" :class="{'activox':opened}">
 					<i class="material-icons">{{opened?'remove':'navigate_next'}}</i>
-				</span><span @click="opened = !opened" :class="{'activoxtext':opened}" class="spanName" style="color: rgb(var(--primary))">{{ name }}</span>
+				</span><span @click="opened = !opened" :class="{'activoxtext':opened}" class="spanName" style="color: rgb(var(--primary-vuenut))">{{ name }}</span>
 			</a>
 
 			<template v-if="opened">
@@ -254,7 +254,7 @@ mounted(){
 	border: 0px;
 	background: transparent;
 	overflow: hidden;
-	color: rgb(var(--secondary));
+	color: rgb(var(--secondary-vuenut));
 	transition: all .3s ease;
 	margin-left: 5px;
 	display: block;
@@ -268,11 +268,11 @@ mounted(){
 }
 .editando input{
 	font-size: 16px;
-	color: rgb(var(--secondary));
+	color: rgb(var(--secondary-vuenut));
 	font-weight: bold;
 	border: 0px;
 	padding-left: 5px;
-	border-bottom: 2px solid rgb(var(--secondary)) !important;
+	border-bottom: 2px solid rgb(var(--secondary-vuenut)) !important;
 	width: auto;
 	transition: all .3s ease;
 }
@@ -284,13 +284,13 @@ mounted(){
 .con-edit-text b {
 	float: left;
 	display: block;
-	border-bottom: 2px solid rgba(var(--gris),0) !important;
+	border-bottom: 2px solid rgba(var(--gris-vuenut),0) !important;
 }
 .con-edit-text a {
 	display: block;
 	float: left;
 	padding-left: 5px;
-	/* border-bottom: 2px solid rgba(var(--gris),0) !important; */
+	/* border-bottom: 2px solid rgba(var(--gris-vuenut),0) !important; */
 }
 .copiando i{
 	transform: rotate(360deg);
@@ -301,7 +301,7 @@ mounted(){
 	display: block;
 }
 .activoEdit {
-	color: rgb(var(--primary));
+	color: rgb(var(--primary-vuenut));
 }
 .con-hijos:hover .btn-copiar {
 	opacity: 1;
@@ -375,16 +375,16 @@ mounted(){
 
 }
 .btn-json:hover,.btn-jsonstring:hover,.btn-copy:hover {
-	color: rgb(var(--primary)) !important;
+	color: rgb(var(--primary-vuenut)) !important;
 }
 .btn-copiar:hover {
-	color: rgb(var(--primary)) !important;
+	color: rgb(var(--primary-vuenut)) !important;
 }
 .con-json {
 	height: 100%;
 	margin-left: 10px;
 	padding: 5px;
-	color: rgb(var(--secondary));
+	color: rgb(var(--secondary-vuenut));
 }
 .con-json a {
 	cursor: pointer;
@@ -403,8 +403,8 @@ mounted(){
 	margin-left: 75px;
 }
 .con-json a:hover .spanx:not(.activox) {
-	border: 1px solid rgb(var(--primary)) !important;
-	color: rgb(var(--primary)) !important;
+	border: 1px solid rgb(var(--primary-vuenut)) !important;
+	color: rgb(var(--primary-vuenut)) !important;
 }
 .jsonx {
 	padding: 5px;
@@ -413,7 +413,7 @@ mounted(){
 	width: 24px;
 	height: 24px;
 	display: block;
-	background: rgb(var(--gris));
+	background: rgb(var(--gris-vuenut));
 	border-radius: 50%;
 	float: left;
 	display: flex;
@@ -428,8 +428,8 @@ mounted(){
 	transition: all .2s ease;
 }
 .activox {
-	background: rgb(var(--primary));
-	color: rgb(var(--fondo));
+	background: rgb(var(--primary-vuenut));
+	color: rgb(var(--fondo-vuenut));
 }
 .activoxtext {
 	font-weight: bold;
@@ -444,8 +444,8 @@ mounted(){
 	align-items: center;
 }
 .check {
-	background: rgb(var(--color-success));
-	color: rgb(var(--fondo)) !important;
+	background: rgb(var(--color-vuenut-success));
+	color: rgb(var(--fondo-vuenut)) !important;
 	font-size: 12px;
 	padding: 3px;
 }
@@ -468,8 +468,8 @@ mounted(){
 	margin-left: 75px;
 }
 .jsonstring .btn-jsonstring {
-	background: rgb(var(--primary));
-	color: rgb(var(--fondo));
+	background: rgb(var(--primary-vuenut));
+	color: rgb(var(--fondo-vuenut));
 	padding: 2px;
 	border-radius: 4px;
 }

@@ -25,7 +25,7 @@ export default {
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 15px;
-  color: rgb(var(--secondary));
+  color: rgb(var(--secondary-vuenut));
 }
 .fade-enter-active, .fade-leave-active {
   transition: all .2s;
@@ -40,7 +40,7 @@ export default {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: rgb(var(--fondo));
+  background: rgb(var(--fondo-vuenut));
   display: flex;
   align-items: center;
   justify-content: center;

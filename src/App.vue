@@ -364,6 +364,7 @@ export default {
   color: rgb(var(--secondary-vuenut));
   background: rgb(var(--fondo-vuenut));
   outline: none;
+  max-height:none !important; 
 }
 .store-edit textarea::selection {
   color: rgb(var(--fondo-vuenut));

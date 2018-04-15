@@ -5,7 +5,7 @@
     </div>
     <div :class="{'ul-flex':resize,'activo-alguno':storesActivos||formato=='json'||resize||config}" class="con-ul">
 
-      <div :class="{'no-va':scroll==0}" @click="scroll-=100" class="btn1">
+      <div :class="{'no-va':scroll==0}" @click="scroll-=150" class="btn1">
         <i class="material-icons">keyboard_arrow_left</i>
       </div>
     <ul
@@ -58,7 +58,7 @@
         </a>
       </li>
     </ul>
-    <div :class="{'no-va2':scroll>=scrollWidth-client}" @click="scroll+=100" class="btn2">
+    <div :class="{'no-va2':scroll>=scrollWidth-client}" @click="scroll+=150" class="btn2">
       <i class="material-icons">keyboard_arrow_right</i>
 
     </div>

@@ -9,6 +9,12 @@
 
 Vuenut is a component based on vue js that is responsible for manipulating save and visualize the data of [vuex](https://vuex.vuejs.org/en/) to facilitate the work and improve the production.
 
+<p align="center">
+<a href="https://lusaxweb.github.io/vuenut.org/">
+<img src="https://github.com/lusaxweb/vuenut/blob/master/src/public/img/vuenut.gif" alt="vuenut">
+</a>
+</p>
+
 ## Advantage
 
 In case of having an application or system that includes a store to maintain the states (vuex) in the case of vuejs vuenut gives you the following advantages

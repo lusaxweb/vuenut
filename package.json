@@ -5,7 +5,7 @@
   "description": "dev tools for Vue js",
   "license": "MIT",
   "author": "ldrovira <luisdanielrovira8@gmail.com>",
-  "homepage": "https://lusaxweb.github.io/vuenut/",
+  "homepage": "https://lusaxweb.github.io/vuenut.org/",
   "repository": "lusaxweb/vuenut",
   "main": "dist/vuenut.common.js",
   "unpkg": "dist/vuenut.common.js",

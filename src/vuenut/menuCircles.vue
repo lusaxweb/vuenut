@@ -1,11 +1,10 @@
 <template lang="html">
   <div class="con-ul-circles">
     <div class="con-logo">
-      <img src="./assets/img/vuenut_opt.png" alt="">
+      <img src="../assets/img/vuenut_opt.png" alt="">
     </div>
     <div :class="{'ul-flex':resize,'activo-alguno':storesActivos||formato=='json'||resize||config}" class="con-ul">
-
-      <div :class="{'no-va':scroll==0}" @click="scroll-=150" class="btn1">
+      <div :class="{'no-va':scroll==0||nombreActivoF||nombreActivo}" @click="scroll-=250" class="btn1">
         <i class="material-icons">keyboard_arrow_left</i>
       </div>
     <ul
@@ -17,10 +16,14 @@
       <li :class="{'copiado':copiado}" @click="$emit('click-copiar','Store copiado',true),copiadox()">
         <i title="Copiar Store" class="material-icons">{{copiado?'thumb_up':'content_copy'}}</i>
       </li>
-      <li  :class="{'nombre-activo':nombreActivo}" >
+      <li ref="listo" :style="{
+        'width':nombreActivo?client-10+'px':''
+        }" :class="{'nombre-activo':nombreActivo}" >
         <i @click="nombreActivo=true" title="Guardar Store" class="material-icons">cloud_upload</i>
         <div class="nombrex" >
-          <input @keypress.enter="guardarStore" v-model="nameStore" placeholder="Name new store" type="text">
+          <input
+
+          @keypress.enter="guardarStore" v-model="nameStore" placeholder="Name new store" type="text">
           <button class="cancelar" @click="nombreActivo=false,nameStore=''" type="button" name="button"><i class="material-icons">clear</i></button>
           <button :disabled="nameStore==''" class="guardar" @click="guardarStore" type="button" name="button"><i class="material-icons">save</i></button>
         </div>
@@ -46,24 +49,52 @@
         <input @change="importarx($event)" type="file" title="Importar Store" accept=".json">
         <i title="Importar Store" class="material-icons">unarchive</i>
       </li>
+
       <li @click="modeNight"  title="night mode">
         <i class="material-icons">hdr_strong</i>
       </li>
+
+      <!-- <li @click="newFunctionx"  title="New function">
+
+      </li> -->
+
+      <li ref="lifun" :style="{
+        'width':nombreActivoF?client-10+'px':''
+        }"  :class="{'nombre-activo':nombreActivoF}" >
+        <!-- <i  title="Guardar Store" class="material-icons">cloud_upload</i> -->
+        <i @click="nombreActivoF=true" class="material-icons">library_add</i>
+        <div class="nombrex" >
+          <input
+
+          @keypress.enter="AgregarFunction" v-model="nameFunction" placeholder="Name new Function" type="text">
+          <button class="cancelar" @click="nombreActivoF=false,nameFunction=''" type="button" name="button"><i class="material-icons">clear</i></button>
+          <button :disabled="nameFunction==''" class="guardar" @click="AgregarFunction" type="button" name="button"><i class="material-icons">save</i></button>
+        </div>
+      </li>
+
+      <li :class="{'activo-menu':myFunctions,'disabledx':flength == 0}" @click="myFunctions = !myFunctions"  title="My functions">
+        <i class="material-icons">library_books</i>
+      </li>
+
       <li :class="{'activo-menu':config}" @click="config=!config">
         <i title="Settings" class="material-icons">settings</i>
       </li>
       <li class="con-img" >
         <a target="_blank" href="https://github.com/lusaxweb/vuenut">
-          <img src="./assets/img/vuenut-favicon-32x32.png" alt="">
+          <img src="../assets/img/vuenut-favicon-32x32.png" alt="">
         </a>
       </li>
     </ul>
-    <div :class="{'no-va2':scroll>=scrollWidth-client}" @click="scroll+=150" class="btn2">
+    <div :class="{'no-va2':scroll>=scrollWidth-client||nombreActivoF||nombreActivo}" @click="scroll+=250" class="btn2">
       <i class="material-icons">keyboard_arrow_right</i>
 
     </div>
     </div>
     <a ref="export" href="#"></a>
+
+    <my-functions v-show="myFunctions" @change-import="changeImport" :visible="visibleF"/>
+
+
     <div v-if="storesActivos" class="con-stores">
       <!-- <button @click="eliminarStores" type="button" name="button">eliminar todo</button> -->
       <ul>
@@ -122,8 +153,12 @@
 </template>
 
 <script>
-import color from './utils/color.js'
+import myFunctions from './myFunctions.vue'
+import color from '../utils/color.js'
 export default {
+  components:{
+    myFunctions
+  },
   props:{
     fontSize:{
       type:[Number,String],
@@ -144,6 +179,9 @@ export default {
   },
   data(){
     return {
+      flength:0,
+      myFunctions:false,
+      visibleF:true,
       restaurando:false,
       night:false,
       config:false,
@@ -156,9 +194,39 @@ export default {
       copiado:false,
       storesx:[],
       nombreActivo:false,
+      nombreActivoF:false,
+      nameFunction:'',
     }
   },
   watch:{
+    nombreActivoF(){
+      let ul = this.$refs.ulcircles
+      console.dir(ul);
+      this.scrollWidth = ul.scrollWidth
+      this.client = ul.clientWidth
+      let lix = this.$refs.lifun
+      if(this.nombreActivoF){
+        this.scroll = lix.offsetLeft - 5
+
+      } else {
+        this.scroll = 0
+      }
+      // console.dir();
+    },
+    nombreActivo(){
+      let ul = this.$refs.ulcircles
+      console.dir(ul);
+      this.scrollWidth = ul.scrollWidth
+      this.client = ul.clientWidth
+      let lix = this.$refs.listo
+      if(this.nombreActivo){
+        this.scroll = lix.offsetLeft - 5
+
+      } else {
+        this.scroll = 0
+      }
+      // console.dir();
+    },
     resize(){
       this.scroll = 0
     },
@@ -199,6 +267,9 @@ export default {
     this.client = ul.clientWidth
 
     this.obtenerColor()
+
+    this.consultarFunctionsPadre()
+
   },
   computed:{
     totalScroll(){
@@ -206,6 +277,64 @@ export default {
     }
   },
   methods:{
+    consultarFunctionsPadre(){
+      let functionsx = JSON.parse(localStorage.getItem('vuenutFunctions'))
+      this.flength = functionsx.length
+    },
+    AgregarFunction(){
+
+      console.dir(this.$children);
+        if(this.nameFunction == ''){
+          return
+        }
+
+        let jsonx = {
+               activos:{
+                 edit:false,
+                 keyx:false,
+                 editName:false
+               },
+               keyx:'1',
+               name:this.nameFunction,
+               startup:false,
+               functionx: `function(){
+      // _this is == this
+      console.log("My new Function '${this.nameFunction}'");
+}`
+             }
+
+             console.log(jsonx);
+             // return
+  if(localStorage.hasOwnProperty('vuenutFunctions')){
+    console.log("ya esta solo add");
+    let storexx = JSON.parse(localStorage.getItem("vuenutFunctions"))
+    storexx.push(jsonx)
+    localStorage.setItem("vuenutFunctions", JSON.stringify(storexx))
+    console.dir(storexx);
+  } else {
+
+    localStorage.setItem("vuenutFunctions", `[${JSON.stringify(jsonx)}]`)
+    console.dir(localStorage);
+
+  }
+  this.nombreActivoF = false
+  this.nameFunction = ''
+  this.$emit('click-copiar','Store guardado',false)
+
+
+  this.$children[0].consultarFunctions()
+
+
+    },
+    changeImport(bien){
+      this.$emit('change-import',bien,'.js',"Function importada")
+    },
+    newFunctionx(){
+      console.log("hola mundo");
+    },
+    myFunctionsx(){
+      console.log("my functions");
+    },
     modeNight(){
 
       if(this.night) {
@@ -234,6 +363,7 @@ export default {
       this.restoreColor()
       this.eliminarStores()
       localStorage.removeItem("vuenutSticky");
+      localStorage.removeItem("vuenutFunctions");
       this.$parent.sticky = true
       localStorage.removeItem('vuenutFontSize')
       this.$parent.fontSize = 16
@@ -353,10 +483,11 @@ this.$emit('click-copiar','Store guardado',false)
 
     },
     exportarx(store){
-      if(JSON.parse(JSON.stringify(store)).hasOwnProperty('vnUser')){
-        delete store.vnUser
+      let storex = JSON.parse(JSON.stringify(store))
+      if(storex.hasOwnProperty('vnUser')){
+        delete storex.vnUser
       }
-      var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(store,null,this.jsonSpace));
+      var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(storex,null,this.jsonSpace));
       this.$refs.export.setAttribute('href','data:'+data)
       this.$refs.export.setAttribute('download','vuenut-store.json')
       this.$refs.export.click()
@@ -373,6 +504,7 @@ this.$emit('click-copiar','Store guardado',false)
 </script>
 
 <style lang="css" scoped>
+
 /* .src= */
 /* .logo-vuenut {
   background-image: url("./assets/img/vuenut.png");
@@ -806,7 +938,7 @@ this.$emit('click-copiar','Store guardado',false)
   font-size: 16px;
 }
 .nombre-activo{
-  width: 250px !important;
+  /* width: 250px !important; */
   border-radius: 20px !important;
 }
 .nombre-activo>i {

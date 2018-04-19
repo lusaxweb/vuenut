@@ -1,11 +1,17 @@
+import Vue from 'vue'
+import App from './App.vue'
+import Vuex from 'vuex'
+Vue.config.productionTip = false
 
-import components from './App.vue'
-const Vuenut = {
-  install(Vue, options) {
-      Vue.component(components.name,components)
-  }
-}
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(Vuenut)
-}
-export default Vuenut
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
+  state: {
+    myName:'Change my text from vuenut'
+  },
+})
+
+new Vue({
+  store,
+  render: h => h(App)
+}).$mount('#app')

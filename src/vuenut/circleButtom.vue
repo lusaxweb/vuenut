@@ -9,13 +9,14 @@
       }"
     v-on="$listeners"
     :style="{
-      'left':`${visible?360:leftx}px`,
+      'left':`${visible?anchox:leftx}px`,
       'top':`${topx>30?topx:30}px`,
     }"
    class="con-circle-btn">
     <!-- {{visible?'<':'>'}} -->
     <i v-if="visible" class="material-icons">navigate_before</i>
     <i v-else class="material-icons">navigate_next</i>
+
   </div>
 </template>
 
@@ -44,6 +45,7 @@ export default {
     return {
       leftx:0,
       topx:0,
+      anchox:'hol',
     }
   },
   created(){
@@ -52,7 +54,13 @@ export default {
   },
   mounted(){
     let btn = this.$refs.btn
-    document.body.insertBefore(btn, document.body.firstChild)
+      document.body.insertBefore(btn, document.body.firstChild)
+      // console.dir(this.$parent.$refs.convuenut);
+      this.anchox = this.$parent.$refs.convuenut.offsetWidth - 5
+
+      window.addEventListener('resize',()=>{
+        this.anchox = this.$parent.$refs.convuenut.offsetWidth - 5
+      })
   },
   methods:{
     mousemovex(event){

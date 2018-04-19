@@ -1,10 +1,12 @@
 <template lang="html">
   <div
+  ref="convuenut"
   :style="{'font-size':fontSize+'px'}"
   class="contiene-vuenut"
   :class="{
     'resizex':resize,
-    'unseen':unseen
+    'unseen':unseen,
+    'visiblex':visible
     }">
     <circle-buttom
      :sticky="sticky"
@@ -14,9 +16,7 @@
      @click="clickCircle"/>
 
   <div
-    :class="{
-    'visiblex':visible,
-    }"
+
     class="con-vuenut">
 
     <locked v-if="password!=passwordx" v-model="passwordx"/>
@@ -64,7 +64,7 @@
             <i class="material-icons">save</i>
           </li>
         </ul>
-        <textarea ref="textareax" :value="JSON.stringify(storeVuenut,null,2)" name="name"></textarea>
+        <textarea spellcheck="false" ref="textareax" :value="JSON.stringify(storeVuenut,null,2)" name="name"></textarea>
       </div>
     </div>
 
@@ -90,16 +90,17 @@ import menuCircles from './menuCircles.vue'
 import jsonview from './jsonview.vue'
 import locked from './locked.vue'
 
-require('./assets/iconfont/material-icons.css');
+// require('assets/iconfont/material-icons.css');
+// import Image from 'assets/vuenut.png'
 
 export default {
   name:'vuenut',
   props:{
+
     unseen:{
       type:Boolean,
       default:false,
     },
-
     password:{
       type:[String,Boolean],
       default:false,
@@ -117,6 +118,8 @@ export default {
   },
   data(){
     return {
+      // imgx:Image,
+      baseUrl: process.env.BASE_URL,
       storeVuenut:this.store,
       fontSize:16,
       jsonSpace:2,
@@ -220,16 +223,16 @@ export default {
       console.log("paso",this.sticky);
       localStorage.setItem("vuenutSticky", this.sticky);
     },
-    changeImport(valido){
+    changeImport(valido,archivo='.json',texto="Store importado"){
       if(valido){
-        this.texto = "Store importado"
+        this.texto = texto
         this.copiado = true
         setTimeout( () => {
           this.copiado = false
         }, 2000);
       } else {
 
-        this.textoEliminado = "Solo se permiten archivos (.json)"
+        this.textoEliminado = `Solo se permiten archivos (${archivo})`
         this.eliminado = true
         setTimeout( () => {
           this.eliminado = false
@@ -282,7 +285,34 @@ export default {
 </script>
 
 <style lang="css">
-
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+.material-icons {
+  font-family: 'Material Icons' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.contiene-vuenut * {
+  margin: 0px;
+  padding: 0px;
+  font-family: arial;
+  box-sizing: border-box;
+  outline: none;
+}
 .con-prejson {
   padding: 10px;
 }
@@ -295,7 +325,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: rgb(var(--primary));
+  background: rgb(var(--primary-vuenut));
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
@@ -305,7 +335,7 @@ export default {
   left: 15px;
 }
 .guardar-li {
-  background: rgb(var(--gris),.2);
+  background: rgb(var(--gris-vuenut),.2);
   margin-left: 10px;
 }
 .store-edit ul li {
@@ -314,13 +344,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(var(--fondo));
+  color: rgb(var(--fondo-vuenut));
   cursor: pointer;
   transition: all .3s ease;
   border-radius: 50%;
 }
 .store-edit ul li:hover {
-  background: rgb(var(--secondary),.2)
+  background: rgb(var(--secondary-vuenut),.2)
 }
 .store-edit ul li i {
   font-size: 20px;
@@ -334,20 +364,22 @@ export default {
   border: 0px;
   padding: 10px;
   resize: none;
-  color: rgb(var(--secondary));
-  background: rgb(var(--fondo));
+  color: rgb(var(--secondary-vuenut));
+  background: rgb(var(--fondo-vuenut));
+  outline: none;
+  max-height:none !important;
 }
 .store-edit textarea::selection {
-  color: rgb(var(--fondo));
-  background: rgb(var(--secondary));
+  color: rgb(var(--fondo-vuenut));
+  background: rgb(var(--secondary-vuenut));
 }
 
 :root {
-  --primary: 0, 198, 158;
-  --secondary: 67, 84, 102;
-  --danger: 255, 74, 74;
-  --fondo:255, 255, 255;
-  --gris:240, 240, 240;
+  --primary-vuenut: 0, 198, 158;
+  --secondary-vuenut: 67, 84, 102;
+  --danger-vuenut: 255, 74, 74;
+  --fondo-vuenut:255, 255, 255;
+  --gris-vuenut:240, 240, 240;
 }
 *::-webkit-scrollbar{
   width: 5px;
@@ -358,13 +390,13 @@ export default {
   border-radius: 5px;
 }
 .hljs-name {
-  color: rgba(var(--primary),1);
+  color: rgba(var(--primary-vuenut),1);
 }
 .hljs-string {
-  color: rgb(var(--secondary)) !important;
+  color: rgb(var(--secondary-vuenut)) !important;
 }
 .hljs-attr {
-  color:rgba(var(--primary),1);
+  color:rgba(var(--primary-vuenut),1);
 
 }
 .code {
@@ -372,7 +404,7 @@ export default {
   font-weight: normal;
 
   background: rgb(245, 245, 245);
-  color: rgb(var(--secondary));
+  color: rgb(var(--secondary-vuenut));
   overflow: auto;
   max-height:300px;
   height: auto;
@@ -394,8 +426,8 @@ export default {
 
 .noti {
   width: 100%;
-  background: rgb(var(--primary));
-  color: rgb(var(--fondo));
+  background: rgb(var(--primary-vuenut));
+  color: rgb(var(--fondo-vuenut));
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -409,16 +441,16 @@ export default {
   margin-right: 10px;
 }
 .n-eliminar {
-  background: rgb(var(--danger));
+  background: rgb(var(--danger-vuenut));
 }
 .con-vuenut {
   position: fixed;
   left: 0px;
   top: 0px;
-  width: 360px;
-  background: rgb(var(--fondo));
+  width: 100%;
+  background: rgb(var(--fondo-vuenut));
   height: 100vh;
-  transform: translate(-100%);
+
   transition: all .3s ease;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
   border-radius: 0px 10px 10px 0px;
@@ -431,22 +463,25 @@ export default {
 }
 .arbolJson {
   font-weight: bold;
-  color: rgb(var(--secondary));
+  color: rgb(var(--secondary-vuenut));
   overflow: auto;
   height: 100%;
 }
 .resizex {
-  width: 100%;
-}
-.resizex .con-vuenut {
   width: 100% !important;
 }
+/* .resizex .con-vuenut {
+  width: 100% !important;
+} */
 .contiene-vuenut {
   position: fixed;
   z-index: 200000;
   display: block;
-  left: 0px;
   top: 0px;
+  left: 0px;
+  transform: translate(-100%);
+  transition: all .3s ease;
+  width: 360px;
 }
 .con-funcionalidad {
   display: flex;
@@ -455,4 +490,14 @@ export default {
   flex-direction: column;
   height: 100vh;
 }
+@media only screen and (max-width: 450px) {
+  .contiene-vuenut {
+    width: calc(100% - 60px);
+  }
+  .con-vuenut {
+    /* width: calc(100% - 60px); */
+  }
+
+}
+
 </style>

@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue build -t lib src/vuenut/index.js",
     "lint": "vue-cli-service lint",
     "v": "npm version patch",
     "p": "npm publish"

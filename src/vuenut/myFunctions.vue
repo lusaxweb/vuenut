@@ -103,8 +103,8 @@ export default {
       localStorage.setItem("vuenutFunctions", JSON.stringify(funxx))
     },
     consultarFunctions(){
-      let functionsx = JSON.parse(localStorage.getItem('vuenutFunctions'))
-      // console.log(functionsx);
+      if(localStorage.hasOwnProperty('vuenutFunctions')){
+        let functionsx = JSON.parse(localStorage.getItem('vuenutFunctions'))
       functionsx.forEach((item)=>{
         item.activos = {
           edit:false,
@@ -117,6 +117,7 @@ export default {
       if(functionsx.length == 0){
         this.$parent.myFunctions = false
       }
+    }
     },
     ejecutarFunction(funx){
       let funxx = eval(`(${funx})`)

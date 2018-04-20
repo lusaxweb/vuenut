@@ -278,8 +278,10 @@ export default {
   },
   methods:{
     consultarFunctionsPadre(){
-      let functionsx = JSON.parse(localStorage.getItem('vuenutFunctions'))
-      this.flength = functionsx.length
+      if(localStorage.hasOwnProperty('vuenutFunctions')){
+        let functionsx = JSON.parse(localStorage.getItem('vuenutFunctions'))
+        this.flength = functionsx.length
+      }
     },
     AgregarFunction(){
 
@@ -394,10 +396,10 @@ export default {
       localStorage.setItem("vuenutColor", `${colorxx.r},${colorxx.g},${colorxx.b}`)
     },
     ponerStore(i){
-      let storePoner = this.storesx.filter((item,index) => {
+      let storePoner = JSON.parse(JSON.stringify(this.storesx)).filter((item,index) => {
         return i == index
       })
-      storePoner = JSON.parse(JSON.stringify(storePoner[0]))
+      storePoner = storePoner[0]
       if(storePoner.hasOwnProperty('vnUser')){
         delete storePoner.vnUser
       }

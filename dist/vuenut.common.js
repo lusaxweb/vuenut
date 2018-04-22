@@ -6212,13 +6212,6 @@ module.exports = __webpack_require__("Q6ua");
 
 /***/ }),
 
-/***/ "IPrg":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "IZDm":
 /***/ (function(module, exports) {
 
@@ -12407,6 +12400,15 @@ var es6_number_is_integer_default = /*#__PURE__*/__webpack_require__.n(es6_numbe
       this.jsonxx = this.json;
     }
   },
+  computed: {
+    jsonTotal: function jsonTotal() {
+      var isNull = function isNull(value) {
+        return value === null;
+      };
+
+      return isNull(this.json) ? {} : Object.keys(this.json);
+    }
+  },
   methods: {
     inputx: function inputx(value, booleanx) {
       // console.log(this);
@@ -12503,19 +12505,19 @@ var es6_number_is_integer_default = /*#__PURE__*/__webpack_require__.n(es6_numbe
     }
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-cc21d20c","hasScoped":true,"optionsId":"1","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/vuenut/jsonview.vue
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-56fc27ba","hasScoped":true,"optionsId":"1","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/vuenut/jsonview.vue
 var jsonview_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"con-json"},[(typeof( _vm.jsonxx ) === 'object' && ( _vm.maxDepth == 0 || ( _vm.currentDepth < _vm.maxDepth ) ))?[_c('div',{staticClass:"con-json-view"},[_c('a',{staticClass:"a-json",class:{'jsonstring':_vm.jsonstringx}},[_c('div',{staticClass:" btn-copy",class:{
 				'copiando':_vm.iconCopy
 				},attrs:{"title":"Copiar Store"},on:{"click":function($event){_vm.copiar($event,null)}}},[_c('i',{staticClass:"material-icons"},[_vm._v(_vm._s(_vm.iconCopy?'thumb_up':'my_location'))])]),_c('div',{staticClass:" btn-json",class:{
 				'copiando':_vm.checkJ
-				},attrs:{"title":"Copiar Store"},on:{"click":function($event){_vm.toggleJson(_vm.json)}}},[_c('i',{staticClass:"material-icons"},[_vm._v(_vm._s(_vm.checkJ?'thumb_up':'content_copy'))])]),_c('div',{staticClass:" btn-jsonstring",attrs:{"title":"Cambiar Formato"},on:{"click":function($event){_vm.jsonstringx=!_vm.jsonstringx}}},[_c('i',{staticClass:"material-icons"},[_vm._v("flip")])]),_c('span',{staticClass:"spanx",class:{'activox':_vm.opened},on:{"click":function($event){_vm.opened = !_vm.opened}}},[_c('i',{staticClass:"material-icons"},[_vm._v(_vm._s(_vm.opened?'remove':'navigate_next'))])]),_c('span',{staticClass:"spanName",class:{'activoxtext':_vm.opened},staticStyle:{"color":"rgb(var(--primary-vuenut))"},on:{"click":function($event){_vm.opened = !_vm.opened}}},[_vm._v(_vm._s(_vm.name))])]),(_vm.opened)?_vm._l((Object.keys( _vm.json )),function(k,index){return _c('jsonview',{key:k,attrs:{"max-depth":_vm.maxDepth,"current-depth":_vm.currentDepth + 1,"json":_vm.jsonstringx?JSON.stringify(_vm.jsonxx[ k ],null,2):_vm.json[ k ],"name":k,"jsonstring":_vm.jsonstringx},on:{"update:json":function($event){_vm.$set(_vm.jsonstringx?JSON.stringify(_vm.jsonxx[ k ],null,2):_vm.json,  k , $event)},"copied-click":_vm.$listeners['copied-click']}})}):_vm._e()],2)]:[_c('div',{staticClass:"con-hijos"},[_c('div',{staticClass:"btn-copiar",class:{
+				},attrs:{"title":"Copiar Store"},on:{"click":function($event){_vm.toggleJson(_vm.json)}}},[_c('i',{staticClass:"material-icons"},[_vm._v(_vm._s(_vm.checkJ?'thumb_up':'content_copy'))])]),_c('div',{staticClass:" btn-jsonstring",attrs:{"title":"Cambiar Formato"},on:{"click":function($event){_vm.jsonstringx=!_vm.jsonstringx}}},[_c('i',{staticClass:"material-icons"},[_vm._v("flip")])]),_c('span',{staticClass:"spanx",class:{'activox':_vm.opened},on:{"click":function($event){_vm.opened = !_vm.opened}}},[_c('i',{staticClass:"material-icons"},[_vm._v(_vm._s(_vm.opened?'remove':'navigate_next'))])]),_c('span',{staticClass:"spanName",class:{'activoxtext':_vm.opened},staticStyle:{"color":"rgb(var(--primary-vuenut))"},on:{"click":function($event){_vm.opened = !_vm.opened}}},[_vm._v(_vm._s(_vm.name))])]),(_vm.opened)?_vm._l((_vm.jsonTotal),function(k,index){return _c('jsonview',{key:k,attrs:{"max-depth":_vm.maxDepth,"current-depth":_vm.currentDepth + 1,"json":_vm.jsonstringx?JSON.stringify(_vm.jsonxx[ k ],null,2):_vm.json[ k ],"name":k,"jsonstring":_vm.jsonstringx},on:{"update:json":function($event){_vm.$set(_vm.jsonstringx?JSON.stringify(_vm.jsonxx[ k ],null,2):_vm.json,  k , $event)},"copied-click":_vm.$listeners['copied-click']}})}):_vm._e()],2)]:[_c('div',{staticClass:"con-hijos"},[_c('div',{staticClass:"btn-copiar",class:{
 				'copiando':_vm.iconCopy
 				},attrs:{"title":"Copiar Ruta"},on:{"click":function($event){_vm.copiar($event,_vm.name)}}},[_c('i',{staticClass:"material-icons"},[_vm._v(_vm._s(_vm.iconCopy?'thumb_up':'my_location'))])]),_c('span',{directives:[{name:"show",rawName:"v-show",value:(!_vm.jsonstring),expression:"!jsonstring"}],staticClass:"con-edit-text"},[_c('b',{staticClass:"b"},[_vm._v(_vm._s(_vm.name + ": ")+" ")]),(!_vm.editandox)?_c('a',{on:{"click":function($event){_vm.editandox=true}}},[_vm._v("\n\t\t\t\t\t"+_vm._s(_vm.jsonxx)+"\n\t\t\t\t")]):_c('div',{staticClass:"editando eee",attrs:{"id":"editando"}},[(typeof _vm.json != 'boolean')?_c('input',{directives:[{name:"focus",rawName:"v-focus",value:(_vm.editandox),expression:"editandox"}],attrs:{"type":"text"},domProps:{"value":_vm.json},on:{"keypress":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }_vm.editandox=false},"blur":function($event){_vm.editandox=false},"input":function($event){_vm.inputx($event.target.value)}}}):_c('button',{directives:[{name:"focus",rawName:"v-focus",value:(_vm.editandox),expression:"editandox"}],staticClass:"btn-boolean material-icons",attrs:{"type":"button","name":"button"},on:{"blur":function($event){_vm.editandox=false},"click":function($event){_vm.inputx(!_vm.json,true)}}},[_vm._v(_vm._s(_vm.json?'check_box':'check_box_outline_blank'))])])]),_c('span',{directives:[{name:"show",rawName:"v-show",value:(_vm.jsonstring),expression:"jsonstring"}]},[_c('b',{staticClass:"b"},[_vm._v(_vm._s(_vm.name))]),_vm._v(":"),_c('code',[_c('pre',[_vm._v(_vm._s(_vm.jsonxx))])])])])]],2)}
 var jsonview_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/vuenut/jsonview.vue
 function jsonview_injectStyle (context) {
-  __webpack_require__("IPrg")
+  __webpack_require__("oDQy")
 }
 /* script */
 
@@ -12527,7 +12529,7 @@ var jsonview___vue_template_functional__ = false
 /* styles */
 var jsonview___vue_styles__ = jsonview_injectStyle
 /* scopeId */
-var jsonview___vue_scopeId__ = "data-v-cc21d20c"
+var jsonview___vue_scopeId__ = "data-v-56fc27ba"
 /* moduleIdentifier (server only) */
 var jsonview___vue_module_identifier__ = null
 
@@ -18640,6 +18642,13 @@ module.exports = function(hljs) {
     ]
   };
 };
+
+/***/ }),
+
+/***/ "oDQy":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

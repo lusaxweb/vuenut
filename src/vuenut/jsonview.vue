@@ -24,7 +24,7 @@
 			<template v-if="opened">
 
 				<jsonview
-					v-for="k,index in Object.keys( json )"
+					v-for="k,index in jsonTotal"
 					:key="k"
 					:max-depth="maxDepth"
 					:current-depth="currentDepth + 1"
@@ -127,7 +127,12 @@ mounted(){
 			this.jsonxx = this.json
 		}
 	},
-
+	computed:{
+		jsonTotal(){
+			const isNull = (value) => value === null;
+			return isNull( this.json )?{}:Object.keys( this.json )
+		}
+	},
 	methods:{
 		inputx(value,booleanx){
 			// console.log(this);

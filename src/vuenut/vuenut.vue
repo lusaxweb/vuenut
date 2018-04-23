@@ -9,6 +9,7 @@
     'visiblex':visible
     }">
     <circle-buttom
+     :hidden="hiddenx"
      :sticky="sticky"
      :unseen="unseen"
      :resize="resize"
@@ -80,6 +81,7 @@
   </transition>
   </div>
   </div>
+  <a ref="screenshot" id="screenshot"></a>
 </div>
 </template>
 
@@ -89,14 +91,17 @@ import circleButtom from './circleButtom.vue'
 import menuCircles from './menuCircles.vue'
 import jsonview from './jsonview.vue'
 import locked from './locked.vue'
-
+import html2canvas from 'html2canvas';
 // require('assets/iconfont/material-icons.css');
 // import Image from 'assets/vuenut.png'
 
 export default {
   name:'vuenut',
   props:{
-
+    hidden:{
+      type:Boolean,
+      default:false,
+    },
     unseen:{
       type:Boolean,
       default:false,
@@ -119,6 +124,8 @@ export default {
   data(){
     return {
       // imgx:Image,
+      hiddenx:this.hidden,
+      map:{},
       baseUrl: process.env.BASE_URL,
       storeVuenut:this.store,
       fontSize:16,
@@ -171,11 +178,42 @@ export default {
     hljs.highlightBlock(this.$refs.codex);
     // .each(function(i, block) {
     // });
+    if(this.hidden){
+      document.addEventListener("keyup",this.keyx)
+      document.addEventListener("keydown",this.keyx)
+    }
+
+    document.addEventListener("keyup",this.capturex)
+    document.addEventListener("keydown",this.capturex)
   },
   filters: {
     json: (value) => { return JSON.stringify(value, null, 2) }
   },
   methods:{
+    capturex(){
+      let _this = this
+      let keyx = "p"
+
+    this.map[event.key] = event.type == 'keydown';
+        if(this.map["Alt"] && this.map[keyx]){
+          html2canvas(document.body).then(function(canvas) {
+            var link = _this.$refs.screenshot;
+            var image = canvas.toDataURL();
+            if(!link.href){
+              link.href = image;
+            }
+            link.download = 'vuenut-screenshot.png';
+            link.click()
+          });
+        }
+    },
+    keyx(){
+      let keyx = "h"
+    this.map[event.key] = event.type == 'keydown';
+        if(this.map["Alt"] && this.map[keyx]){
+          this.hiddenx = !this.hiddenx
+        }
+    },
     ofuscarx(){
       let textareax = this.$refs.textareax
       let valuex = JSON.stringify(JSON.parse(textareax.value),null,0)

@@ -1,5 +1,6 @@
 <template lang="html">
   <div
+    v-show="!hidden"
     ref="btn"
     :class="{
       'sticky-no':!sticky,
@@ -25,6 +26,10 @@
 export default {
   name:'circleButtom',
   props:{
+    hidden:{
+      type:Boolean,
+      default:false,
+    },
     sticky:{
       type:[Boolean,String],
     },

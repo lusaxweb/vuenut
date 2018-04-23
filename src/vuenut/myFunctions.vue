@@ -169,15 +169,6 @@ export default {
         }
       }
     })
-    // this.map = {}
-
-    // console.log(this.map);
-      // var y = 0, l = this.key.length, i, t;
-      // for(i = 0; i < l; i ++){
-      //   if(this.key[i]){
-      //     console.log(i);
-      //   }
-      // }
 
     },
     exportarx(index){

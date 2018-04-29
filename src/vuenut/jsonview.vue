@@ -1,6 +1,6 @@
 <template>
 	<div class="con-json">
-		<template class="jsonx" v-if="typeof( jsonxx ) === 'object' && ( maxDepth == 0 || ( currentDepth < maxDepth ) )">
+		<template class="jsonx" v-if="typeof( jsonxx ) === 'object' && !isNullx(jsonxx)  && ( maxDepth == 0 || ( currentDepth < maxDepth ) )">
 			<div class="con-json-view">
 			<a :class="{'jsonstring':jsonstringx}" class="a-json">
 				<div :class="{
@@ -19,6 +19,7 @@
 				<span @click="opened = !opened" class="spanx" :class="{'activox':opened}">
 					<i class="material-icons">{{opened?'remove':'navigate_next'}}</i>
 				</span><span @click="opened = !opened" :class="{'activoxtext':opened}" class="spanName" style="color: rgb(var(--primary-vuenut))">{{ name }}</span>
+
 			</a>
 
 			<template v-if="opened">
@@ -55,11 +56,13 @@
 				<span class="con-edit-text" v-show="!jsonstring">
 					<b class="b">{{ name + ": "}} </b>
 					<a v-if="!editandox" @click="editandox=true">
-						{{ jsonxx }}
+						{{ isNullx(jsonxx)?'null':jsonxx }}
 					</a>
 					<div v-else id="editando" class="editando eee">
 						<!--  -->
 						<input @keypress.enter="editandox=false" v-if="typeof json != 'boolean'" @blur="editandox=false" v-focus="editandox" :value="json" @input="inputx($event.target.value)" type="text">
+
+
 						<!-- <input v-else type="checkbox" :value="json == true" @blur="editandox=false" v-focus="editandox" @change="inputx($event.target.checked,true)"> -->
 						<!-- <a v-else href="#">{{json}}</a> -->
 						<!--  -->
@@ -128,12 +131,17 @@ mounted(){
 		}
 	},
 	computed:{
+
 		jsonTotal(){
 			const isNull = (value) => value === null;
 			return isNull( this.json )?{}:Object.keys( this.json )
 		}
 	},
 	methods:{
+		isNullx(valuex){
+			const isNull = (value) => value === null;
+			return isNull(valuex)
+		},
 		inputx(value,booleanx){
 			// console.log(this);
 			if(booleanx){

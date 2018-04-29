@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="con-prueba">
-    <vuenut hidden :store="$store.state"></vuenut>
+    <vuenut :store="$store.state"></vuenut>
 
     <div class="con-links">
       <a target="_blank" href="https://lusaxweb.github.io/vuenut.org/">

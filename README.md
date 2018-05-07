@@ -7,7 +7,7 @@
 
 # Introduction
 
-Vuenut is a component based on vue js that is responsible for manipulating save and visualize the data of [vuex](https://vuex.vuejs.org/en/) to facilitate the work and improve the production.
+[Vuenut](https://lusaxweb.github.io/vuenut.org/) is a component based on vue js that is responsible for manipulating save and visualize the data of [vuex](https://vuex.vuejs.org/en/) to facilitate the work and improve the production.
 
 <p align="center">
 <a href="https://lusaxweb.github.io/vuenut.org/">

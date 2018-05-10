@@ -5,7 +5,7 @@
 
 # Introduction
 
-Vuenut is a development tool to make work with vuex much easier with features designed for a fast and fluid development.
+Vuenut is a development tool to make working with vuex much easier with features designed for a fast and fluid development.
 
 # Demo
 
@@ -39,7 +39,7 @@ new Vue({
 - https://unpkg.com/vuenut/dist/vuenut.umd.js
 - https://unpkg.com/vuenut/dist/vuenut.css
 
-# install en Proyecto NPM
+# install with NPM
 ``` bash
 # npm
 npm install vuenut

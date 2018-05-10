@@ -7,7 +7,7 @@
 
 # Introduction
 
-[Vuenut](https://lusaxweb.github.io/vuenut.org/) is a component based on vue js that is responsible for manipulating save and visualize the data of [vuex](https://vuex.vuejs.org/en/) to facilitate the work and improve the production.
+[Vuenut](https://lusaxweb.github.io/vuenut.org/) is a Vue.js component that visualizes, manipulates, and saves state data from [vuex](https://vuex.vuejs.org/en/).
 
 <p align="center">
 <a href="https://lusaxweb.github.io/vuenut.org/">
@@ -17,20 +17,20 @@
 
 ## Advantage
 
-In case of having an application or system that includes a store to maintain the states (vuex) in the case of vuejs vuenut gives you the following advantages
+If your application uses a [vuex](https://vuex.vuejs.org/en/) store to maintain state, vuenut gives you the following advantages:
 
 - Easy to implement the store
 - Does not affect other libraries or components
-- Saves the settings in the browser storage
+- Saves settings in the browser storage
 - Easy to add to any project with either webpack or CDN
 - A very nice and intuitive interface
 
 ## What can you do with vuenut?
 
-This component is designed to improve and help us programmers who love the simple fast and effective you can do with vuenut great things but with the simplicity of a click
+This component is designed to improve workflow and help programmers who love simple fast and effective tools. You can do great things with vuenut with the just a click.
 
 - Visualize the entire store as a tree of nodes so as not to get lost
-- Get the final route of the data to add it only with a simple `ctl v`
+- Get the final route of the data to add it with a simple `ctl v`
 - Edit the value you want and where you want by changing the data in the whole application
 - Save the store to reuse it at any time and return to that point of the system
 - Export the current store to give it to another developer or import it later
@@ -69,7 +69,7 @@ new Vue({
 - https://unpkg.com/vuenut/dist/vuenut.umd.js
 - https://unpkg.com/vuenut/dist/vuenut.css
 
-# install en Proyecto NPM
+# install with NPM
 ``` bash
 # npm
 npm install vuenut

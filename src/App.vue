@@ -1,7 +1,6 @@
 <template lang="html">
   <div class="con-prueba">
     <vuenut :store="$store.state"></vuenut>
-
     <div class="con-links">
       <a target="_blank" href="https://lusaxweb.github.io/vuenut.org/">
         <img src="./assets/img/vuenut01.png" alt="">

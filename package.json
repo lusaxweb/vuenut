@@ -26,7 +26,8 @@
     "build": "vue build -t lib src/vuenut/index.js",
     "lint": "vue-cli-service lint",
     "v": "npm version patch",
-    "p": "npm publish"
+    "p": "npm publish",
+    "deploy": "npm run build & git add . & git commit -m 'deploy' & npm run v & npm run p & git push"
   },
   "dependencies": {
     "highlight.js": "^9.12.0",

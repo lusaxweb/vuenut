@@ -98,6 +98,10 @@ import html2canvas from 'html2canvas';
 export default {
   name:'vuenut',
   props:{
+    ignore:{
+      type:Array,
+      default(){return []}
+    },
     hidden:{
       type:Boolean,
       default:false,
@@ -127,7 +131,7 @@ export default {
       hiddenx:this.hidden,
       map:{},
       baseUrl: process.env.BASE_URL,
-      storeVuenut:this.store,
+      storeVuenut:this.ignore.length <= 0?this.store:this.ignoreStore(),
       fontSize:16,
       jsonSpace:2,
       sticky:true,
@@ -190,6 +194,36 @@ export default {
     json: (value) => { return JSON.stringify(value, null, 2) }
   },
   methods:{
+    ignoreStore(){
+      let objectIgnored = JSON.parse(JSON.stringify(this.store))
+      let newJson = {}
+      let ignored = ``
+      this.ignore.forEach((item)=>{
+        ignored  = ``
+        console.log(item);
+        if(/\./g.test(item)){
+          let items = item.split('.')
+          items.forEach((itemxx)=>{
+            ignored += `['${itemxx}']`
+          })
+          console.log('con pundo',ignored);
+        } else {
+          ignored = `['${item}']`
+        }
+        try {
+          eval('delete objectIgnored' + ignored);
+        } catch (e) {
+          console.dir(e instanceof Error);
+          if (e instanceof Error) {
+            console.warn(ignored + 'This value was not found in the current store');
+          } else {
+            throw( e );
+          }
+        }
+      })
+      
+      return objectIgnored
+    },
     capturex(){
       let _this = this
       let keyx = "p"

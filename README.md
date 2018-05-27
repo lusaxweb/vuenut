@@ -96,3 +96,7 @@ Vuenut is an open source MIT project if you want to contribute to keep improving
 ## Lusaxweb
 
 This library was created and is supported by [Lusaxweb](http://www.lusaxweb.com.ve/)
+
+## License
+
+[MIT](https://github.com/lusaxweb/vuenut/blob/master/LICENSE)
